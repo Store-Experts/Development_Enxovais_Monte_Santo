@@ -1,0 +1,686 @@
+{%- style -%}
+  #shopify-section-{{ section.id }} {
+    --gradient-background: {% if section.settings.gradient_background != blank %}{{ section.settings.gradient_background }}{% else %}{{ section.settings.colors_background }}{% endif %};
+    --color-background: {{ section.settings.colors_background.red }}, {{ section.settings.colors_background.green }}, {{ section.settings.colors_background.blue }};
+    --color-foreground: {{ section.settings.colors_text.red }}, {{ section.settings.colors_text.green }}, {{ section.settings.colors_text.blue }};
+    --color-link: {{ section.settings.colors_link.red }}, {{ section.settings.colors_link.green }}, {{ section.settings.colors_link.blue }};
+    --color-border: {{ section.settings.colors_border.red }}, {{ section.settings.colors_border.green }}, {{ section.settings.colors_border.blue }};
+    --color-heading: {{ section.settings.colors_heading.red }}, {{ section.settings.colors_heading.green }}, {{ section.settings.colors_heading.blue }};
+  }
+{%- endstyle -%}
+
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
+
+<link rel="stylesheet" href="{{ 'component-newsletter.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-accordion.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-payment.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-list-social.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'component-rte.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<noscript>{{ 'component-newsletter.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-accordion.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-payment.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-list-social.css' | asset_url | stylesheet_tag }}</noscript>
+<noscript>{{ 'component-rte.css' | asset_url | stylesheet_tag }}</noscript>
+
+<script src="{{ 'footer-accordion.js' | asset_url }}" defer="defer"></script>
+
+<footer class="footer{% if section.settings.show_divider %} footer--border-top{% endif %}">
+  {%- liquid
+    assign enable_right_column = false
+    if section.settings.newsletter_enable or section.settings.show_social or section.settings.enable_follow_on_shop
+      assign enable_right_column = true
+    endif
+  -%}
+  {%- if section.blocks.size > 0 or enable_right_column -%}
+    <div class="footer__content-top page-width">
+      <div class="grid">
+        {%- if section.blocks.size > 0 -%}
+          <div class="grid__item footer__content-left{% if section.blocks.size >= 3 and enable_right_column %} footer__content-left--alt{% endif %}{% if section.blocks.size == 1 and enable_right_column == false %} footer__content-left--only{% endif %}">
+            
+<a href="/">
+    <img src="https://cdn.shopify.com/s/files/1/0932/4960/1852/files/Logotipo_Monte_Santo_Rodape_02.svg?v=1745260825" loading="lazy" width="160" alt="Monte Santo Logo Footer" class="logo-footer">
+</a>
+
+          <div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet">
+              {%- for block in section.blocks -%}
+                <footer-accordion class="accordion footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}" {{ block.shopify_attributes }}>
+   
+
+                      <p class="h4 accordion__title">{{ block.settings.heading | escape }}</p>
+
+
+                    {%- case block.type -%}
+                      {%- when 'text' -%}
+                        <div class="footer-block__details-content rte">
+                          {{ block.settings.subtext }}
+                        </div>
+                        {%- when 'atendimento' -%}
+                        <div class="footer-block__details-content rte">
+                          
+                          <div class="contact-footer">
+<svg data-name="Clock-icon" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 15.12 14.77" style="margin-top: 3px">
+  <path fill="currentColor" d="M8.41,7.11v-3.74c0-.37-.3-.67-.67-.67s-.67.3-.67.67h0v4.02c0,.18.07.35.2.47l2.01,2.01c.26.26.68.26.95,0,.26-.26.26-.69,0-.95l-1.81-1.81Z"/>
+  <path fill="currentColor" d="M7.74.02C3.67.02.37,3.32.37,7.39s3.31,7.37,7.37,7.37,7.37-3.3,7.37-7.37S11.81.02,7.74.02ZM7.74,13.42c-3.33,0-6.03-2.7-6.03-6.03S4.41,1.36,7.74,1.36s6.03,2.7,6.03,6.03-2.71,6.03-6.03,6.03Z"/>
+</svg>
+                              <p style="width:70%;margin:0px">
+                            De segunda à sexta, das 8h às 12h e 13h às 17h.</p>
+                      </div>
+
+    <div class="contact-footer">
+                            <svg data-name="WhatsApp-icon" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 15.12 14.77" style="margin-top: 2px">
+  <path fill="currentColor" d="M1.76,7.38C1.76,4.08,4.44,1.41,7.74,1.41s5.98,2.68,5.98,5.98-2.68,5.98-5.98,5.98c-1.18,0-2.27-.34-3.19-.92-.17-.11-.38-.14-.58-.08l-2.02.6.76-1.78c.09-.21.07-.45-.05-.65-.57-.91-.89-1.99-.89-3.15h0ZM7.74,0C3.66,0,.36,3.31.36,7.38c0,1.29.33,2.51.92,3.57L.06,13.79c-.11.25-.06.54.12.74.18.2.46.28.73.21l3.16-.94c1.08.62,2.33.97,3.67.97,4.08,0,7.38-3.31,7.38-7.38S11.82,0,7.74,0ZM9.35,8.92l-.92.65c-.43-.25-.91-.59-1.39-1.07-.5-.5-.87-1.01-1.14-1.49l.59-.5c.25-.21.32-.57.17-.87l-.75-1.41c-.1-.19-.28-.32-.49-.36-.21-.04-.43.02-.59.16l-.22.19c-.53.47-.85,1.23-.59,2.01.27.8.85,2.07,2.03,3.25,1.28,1.28,2.57,1.78,3.33,1.97.61.16,1.19-.05,1.59-.39l.42-.34c.18-.14.27-.37.26-.6-.02-.23-.14-.44-.34-.55l-1.18-.7c-.24-.14-.54-.13-.76.03l-.02.02Z"/>
+</svg>
+                              <p style="width:90%;margin:0px">
+                            WhatsApp: (31) 98402-7899</p>
+                      </div>
+
+    <div class="contact-footer">
+<svg data-name="E-mail-icon" xmlns="http://www.w3.org/2000/svg" width="14px" height="14px" viewBox="0 0 15.12 14.77" style="margin-top: 3px">
+  <path fill="currentColor" d="M13.17,1.51H2.09c-1.06,0-1.92.86-1.92,1.92v7.91c0,1.06.86,1.92,1.92,1.92h11.08c1.06,0,1.92-.86,1.92-1.92V3.43c0-1.06-.86-1.92-1.92-1.92ZM2.09,11.96c-.34,0-.61-.28-.61-.61V3.89l5.89,5.43c.12.11.28.17.44.17s.32-.06.44-.17l5.53-5.11v7.13c0,.34-.28.61-.61.61H2.09ZM13.39,2.66s.03,0,.05,0c-.01,0-.03,0-.05,0ZM7.81,7.95L2.25,2.82h10.92c.06,0,.11,0,.17.02l-5.53,5.1Z"/>
+</svg>
+                              <p style="width:90%;margin:0px">
+                            sacmontesanto@gmail.com</p>
+                      </div>
+    
+                        </div>
+                      {%- when 'link_list' -%}
+                        {%- if block.settings.menu != blank -%}
+                          <ul class="footer-block__details-content list-unstyled">
+                            {%- for link in block.settings.menu.links -%}
+                              <li>
+                                <a href="{{ link.url }}" class="link list-menu__item list-menu__item--link{% if link.active %} list-menu__item--active{% endif %}">
+                                  {{ link.title }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      {%- when 'image' -%}
+                        <div class="footer-block__details-content footer-block-image {{ block.settings.alignment }}">
+                          {%- if block.settings.link != blank -%}
+                            <a href="{{ block.settings.link }}">
+                          {%- endif -%}
+                            {%- if block.settings.image != blank -%}
+                              {%- liquid
+                                assign image_width = block.settings.image_width
+                                assign image_width_2x = block.settings.image_width | times: 2
+                              -%}
+                              <img
+                                srcset= "{{ block.settings.image | image_url: width: image_width }}, {{ block.settings.image | image_url: width: image_width_2x }} 2x"
+                                src="{{ block.settings.image | image_url: width: image_width }}"
+                                alt="{{ block.settings.image.alt | escape }}"
+                                loading="lazy"
+                                width="{{ block.settings.image.width }}"
+                                height="{{ block.settings.image.height }}"
+                                style="max-width: min(100%, {{ image_width }}px);"
+                              />
+                            {%- else -%}
+                              {{ 'image' | placeholder_svg_tag: 'placeholder' }}
+                            {%- endif -%}
+                          {%- if block.settings.link != blank -%}
+                            </a>
+                          {%- endif -%}
+                          <p class="caption-large">{{ block.settings.text }}</p>
+                        </div>
+                    {%- endcase -%}
+          
+                </footer-accordion>
+              {%- endfor -%}
+            </div>
+
+<div class="footer__blocks-wrapper grid grid--1-col grid--2-col grid--4-col-tablet" style="margin-top:25px">
+   
+  <footer-accordion class="accordion footer-block grid__item">
+  <p class="h4 accordion__title">Selos de Segurança</p><div class="footer-block__details-content">
+
+<a href="https://transparencyreport.google.com/safe-browsing/search?url=https:%2F%2Fenxovais-ms.myshopify.com%2F&hl=pt_BR" target="_blank">
+  <img
+        src="https://cdn.shopify.com/s/files/1/0716/2478/6149/files/Selo_Google_Site_Seguro_Caleo.svg?v=1735561012" 
+        loading="lazy" 
+        width="96" 
+        height="34" 
+        alt="Selo Google Site Seguro Monte Santo" style="margin-right: 8px">
+</a>
+
+<a href="https://safeweb.norton.com/report?url=https:%2F%2Fenxovais-ms.myshopify.com%2F" target="_blank">
+  <img
+        src="https://cdn.shopify.com/s/files/1/0716/2478/6149/files/Selo_SSL_Seguro_Norton_Caleo.svg?v=1735561013" 
+        loading="lazy" 
+        width="96" 
+        height="34" 
+        alt="Selo Norton Security Monte Santo">
+</a>
+
+
+
+
+
+
+    
+
+  </div></footer-accordion>
+
+  <footer-accordion class="accordion footer-block grid__item">
+  <p class="h4 accordion__title">Métodos de Pagamento</p><div class="footer-block__details-content rte">
+    
+
+    <svg data-name="Pix_Icon" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 21.9" alt="Pix Icon">
+      <path fill="currentColor" d="M30.03,21.88H1.97c-1.09,0-1.97-.88-1.97-1.97V1.97C0,.88.88,0,1.97,0h28.07c1.09,0,1.97.88,1.97,1.97v17.97c0,1.09-.88,1.97-1.97,1.97h0ZM1.97.57c-.77,0-1.4.63-1.4,1.4v17.97c0,.77.63,1.4,1.4,1.4h28.07c.77,0,1.41-.63,1.41-1.4V1.97c0-.77-.63-1.4-1.41-1.4H1.97Z"/>
+      <g>
+        <path fill="currentColor" d="M20.87,15.57c-.34,0-.68-.06-.98-.19-.31-.13-.59-.31-.83-.55l-2.62-2.62c-.1-.08-.22-.13-.34-.13s-.25.05-.34.13l-2.63,2.63c-.24.24-.52.42-.83.55-.31.13-.64.19-.98.19h-.52l3.32,3.32c1.04,1.04,2.71,1.04,3.75,0l3.32-3.33h-.33ZM11.32,6.32c.69,0,1.33.27,1.81.75l2.63,2.63s.1.08.16.11.12.04.18.04.13-.01.18-.04c.06-.02.11-.06.16-.11l2.62-2.62c.24-.24.52-.42.83-.55s.64-.19.98-.19h.31l-3.32-3.32c-.49-.49-1.17-.77-1.87-.77s-1.37.28-1.87.77l-3.32,3.32h.52Z"/>
+        <path fill="currentColor" d="M23.93,9.07l-2.01-2.01s-.1.02-.14.02h-.92c-.47,0-.93.19-1.27.53l-2.62,2.62c-.12.12-.25.2-.41.28-.16.06-.31.1-.48.1s-.33-.04-.48-.1c-.16-.06-.29-.16-.41-.28l-2.63-2.63c-.34-.34-.8-.52-1.27-.53h-1.12s-.1,0-.13-.02l-2.01,2.01c-1.04,1.04-1.04,2.71,0,3.75l2.01,2.01s.08-.02.13-.02h1.12c.47,0,.93-.19,1.27-.52l2.63-2.63c.24-.23.55-.35.89-.35s.65.13.89.35l2.62,2.62c.34.34.8.52,1.27.52h.92s.1.01.14.02l2.01-2.01c1.04-1.04,1.04-2.71,0-3.75v.02Z"/>
+      </g>
+    </svg>
+
+    <svg data-name="Billet_Icon" data-name="Layer 1" width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 21.9" alt="Boleto Icon">
+      <path fill="currentColor" d="M29.93,21.8H2.07c-1.08,0-1.95-.87-1.95-1.95V2.02C.11.94.99.07,2.07.07h27.87c1.08,0,1.95.87,1.95,1.95v17.84c0,1.08-.87,1.95-1.95,1.95h0ZM2.07.63c-.77,0-1.39.62-1.39,1.39v17.84c0,.77.62,1.39,1.39,1.39h27.87c.77,0,1.4-.62,1.4-1.39V2.02c0-.77-.62-1.39-1.4-1.39H2.07Z"/>
+      <path fill="currentColor" d="M6.06,3.13h-2.32v10.03h2.32V3.13Z"/>
+      <path fill="currentColor" d="M8.39,3.13h-1.16v10.03h1.16V3.13Z"/>
+      <path fill="currentColor" d="M9.55,3.13v10.03h2.32V3.13h-2.32Z"/>
+      <path fill="currentColor" d="M13.04,3.13v10.03h2.32V3.13h-2.32Z"/>
+      <path fill="currentColor" d="M17.69,3.13h-1.16v10.03h1.16V3.13Z"/>
+      <path fill="currentColor" d="M18.86,3.13v10.03h3.48V3.13h-3.48Z"/>
+      <path fill="currentColor" d="M23.51,3.13v10.03h2.36V3.13h-2.36Z"/>
+      <path fill="currentColor" d="M28.26,3.13h-1.2v10.03h1.2V3.13Z"/>
+      <path fill="currentColor" d="M3.74,18.69v-3.82h1.39c.26,0,.49.02.67.07.19.05.35.12.45.2.12.08.2.19.26.32.06.12.08.26.08.42,0,.08-.01.18-.04.26-.02.08-.07.16-.13.23-.06.07-.13.13-.23.19-.08.06-.19.11-.32.14.55.12.84.41.84.85,0,.17-.04.31-.1.44-.06.13-.16.25-.29.36-.12.1-.28.18-.45.23-.18.06-.4.08-.62.08h-1.52,0ZM4.48,17.02v1.11h.77c.14,0,.25-.01.35-.05s.17-.07.23-.13c.06-.05.1-.12.12-.18.02-.07.04-.14.04-.23s-.01-.16-.04-.23c-.02-.07-.07-.12-.13-.17s-.13-.08-.23-.11-.2-.04-.34-.04h-.77ZM4.48,16.53h.6c.25,0,.44-.05.59-.13.13-.08.2-.23.2-.42s-.06-.34-.18-.42c-.12-.08-.31-.13-.56-.13h-.65v1.1Z"/>
+      <path fill="currentColor" d="M12.04,16.79c0,.28-.05.54-.14.78s-.24.44-.42.62c-.18.18-.4.31-.65.41s-.53.14-.84.14-.59-.05-.84-.14-.47-.24-.65-.41c-.18-.18-.32-.38-.42-.62-.1-.24-.14-.5-.14-.78s.05-.54.14-.78.24-.44.42-.62c.18-.18.4-.31.65-.41s.53-.14.84-.14.59.05.84.14.47.24.65.41.32.38.42.62c.1.24.14.49.14.78ZM11.26,16.79c0-.2-.02-.4-.08-.56-.06-.17-.14-.31-.25-.42-.11-.12-.24-.2-.41-.26-.16-.06-.34-.1-.53-.1s-.37.04-.54.1c-.16.06-.29.16-.41.26-.11.12-.19.26-.25.42-.06.17-.08.35-.08.56s.02.4.08.56.14.31.25.42c.11.12.25.2.41.26s.34.1.54.1.37-.04.53-.1c.16-.06.29-.14.41-.26.11-.12.19-.25.25-.42s.08-.36.08-.56Z"/>
+      <path fill="currentColor" d="M14.16,18.11h1.62v.59h-2.37v-3.82h.75v3.23Z"/>
+      <path fill="currentColor" d="M19.63,14.88v.56h-1.8v1.05h1.41v.55h-1.41v1.08h1.8v.56h-2.55v-3.82h2.55Z"/>
+      <path fill="currentColor" d="M23.9,14.88v.59h-1.21v3.23h-.75v-3.23h-1.22v-.59h3.18Z"/>
+      <path fill="currentColor" d="M28.82,16.79c0,.28-.05.54-.14.78s-.24.44-.42.62-.4.31-.65.41c-.25.1-.53.14-.84.14s-.59-.05-.84-.14c-.25-.1-.47-.24-.65-.41-.18-.18-.32-.38-.42-.62-.1-.24-.14-.5-.14-.78s.05-.54.14-.78.24-.44.42-.62c.18-.18.4-.31.65-.41.25-.1.53-.14.84-.14s.59.05.84.14c.25.1.47.24.65.41.18.17.32.38.42.62.1.24.14.49.14.78ZM28.04,16.79c0-.2-.02-.4-.08-.56s-.14-.31-.25-.42-.24-.2-.41-.26c-.16-.06-.34-.1-.53-.1s-.37.04-.54.1c-.16.06-.29.16-.41.26-.11.12-.19.26-.25.42-.06.17-.08.35-.08.56s.02.4.08.56.14.31.25.42c.11.12.25.2.41.26.16.06.34.1.54.1s.37-.04.53-.1c.16-.06.29-.14.41-.26.11-.12.19-.25.25-.42s.08-.36.08-.56Z"/>
+    </svg>
+
+
+<svg data-name="Visa_Icon" width="32px" height="32px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 21.9" alt="Visa Icon">
+  <path fill="currentColor" d="M29.35,21.76H2.65c-1.4,0-2.53-1.13-2.53-2.53V2.65C.11,1.25,1.25.11,2.65.11h26.71c1.4,0,2.53,1.13,2.53,2.53v16.58c0,1.4-1.13,2.53-2.53,2.53ZM2.65.68c-1.09,0-1.97.88-1.97,1.97v16.58c0,1.09.88,1.98,1.98,1.98h26.71c1.09,0,1.98-.88,1.98-1.98V2.65c0-1.09-.88-1.98-1.98-1.98H2.65Z"/>
+  <path fill="currentColor" d="M9.67,14.86h-1.96l-1.47-5.59c-.07-.26-.21-.49-.43-.6-.54-.27-1.13-.48-1.79-.6v-.21h3.14c.43,0,.76.32.81.69l.76,4.04,1.95-4.73h1.9l-2.93,6.98h.01ZM13.69,14.86h-1.84l1.52-6.98h1.84l-1.52,6.98ZM17.59,9.81c.06-.37.38-.6.76-.6.6-.06,1.24.06,1.79.32l.32-1.5c-.54-.21-1.13-.32-1.68-.32-1.79,0-3.09.97-3.09,2.3,0,1.03.92,1.55,1.58,1.89.7.32.98.54.92.86,0,.48-.54.69-1.09.69-.66,0-1.3-.16-1.9-.43l-.32,1.5c.66.26,1.36.38,2.01.38,2.01.05,3.26-.92,3.26-2.36,0-1.83-2.56-1.93-2.56-2.73ZM26.6,14.86l-1.47-6.98h-1.58c-.32,0-.66.21-.76.54l-2.71,6.45h1.9l.38-1.01h2.33l.21,1.01h1.7ZM23.83,9.76l.54,2.63h-1.52l.98-2.63Z"/>
+</svg>
+
+<svg data-name="Mastercard_Icon" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 21.9" alt="Mastercard Icon">
+  <path fill="currentColor" d="M29.93,21.8H2.07c-1.08,0-1.95-.87-1.95-1.95V2.02C.11.94.99.07,2.07.07h27.87c1.08,0,1.95.87,1.95,1.95v17.84c0,1.08-.87,1.95-1.95,1.95h0ZM2.07.63c-.77,0-1.39.62-1.39,1.39v17.84c0,.77.62,1.39,1.39,1.39h27.87c.77,0,1.4-.62,1.4-1.39V2.02c0-.77-.62-1.39-1.4-1.39H2.07Z"/>
+  <path fill="currentColor" d="M11.56,17.01v1.65h-.36v-.2c-.12.14-.29.24-.53.24-.47,0-.83-.36-.83-.86s.36-.86.83-.86c.24,0,.41.1.53.24v-.2h.36ZM10.72,17.29c-.31,0-.5.24-.5.53s.19.53.5.53.5-.23.5-.53-.2-.53-.5-.53ZM23.76,17.82c0-.29.19-.53.5-.53s.5.23.5.53-.2.53-.5.53-.5-.24-.5-.53ZM25.1,16.35v2.31h-.36v-.2c-.12.14-.29.24-.53.24-.47,0-.83-.36-.83-.86s.36-.86.83-.86c.24,0,.41.1.53.24v-.86h.36ZM16.04,17.28c.23,0,.38.14.42.4h-.86c.04-.24.18-.4.44-.4ZM15.22,17.82c0-.51.34-.86.83-.86s.79.35.79.86v.13h-1.23c.05.3.26.41.49.41.17,0,.35-.06.48-.17l.18.26c-.2.17-.43.23-.68.23-.49,0-.85-.34-.85-.86ZM20.41,17.82c0-.29.19-.53.5-.53s.5.23.5.53-.2.53-.5.53-.5-.24-.5-.53ZM21.75,17.01v1.65h-.36v-.2c-.12.14-.29.24-.53.24-.47,0-.83-.36-.83-.86s.36-.86.83-.86c.24,0,.41.1.53.24v-.2h.36ZM18.37,17.82c0,.5.35.86.89.86.25,0,.42-.06.6-.19l-.17-.29c-.13.1-.28.14-.43.14-.29,0-.5-.22-.5-.53s.22-.53.5-.53c.16,0,.3.05.43.14l.17-.29c-.18-.14-.35-.19-.6-.19-.54,0-.89.36-.89.86ZM22.58,17.2c.1-.14.23-.24.44-.24.07,0,.18.01.25.05l-.11.34c-.07-.04-.16-.04-.23-.04-.24,0-.36.16-.36.42v.92h-.36v-1.65h.36v.2ZM13.34,17.14c-.17-.11-.41-.17-.68-.17-.42,0-.69.2-.69.53,0,.26.2.43.57.49l.17.02c.2.02.29.08.29.17,0,.13-.13.2-.38.2s-.43-.08-.55-.17l-.17.28c.2.14.44.22.72.22.48,0,.75-.23.75-.54,0-.29-.22-.44-.57-.49l-.17-.02c-.16-.02-.28-.05-.28-.16,0-.12.12-.19.31-.19.22,0,.42.08.51.14l.16-.29v-.02ZM17.57,17.2c.1-.14.23-.24.43-.24.07,0,.18.01.25.05l-.11.34c-.07-.04-.16-.04-.23-.04-.24,0-.36.16-.36.42v.92h-.36v-1.65h.36v.2h.01ZM14.92,17.01h-.59v-.5h-.36v.5h-.34v.32h.34v.75c0,.38.14.61.57.61.16,0,.34-.05.45-.13l-.11-.31c-.11.06-.23.1-.32.1-.18,0-.24-.11-.24-.28v-.74h.59v-.32ZM9.52,17.62v1.03h-.36v-.92c0-.28-.12-.43-.36-.43s-.41.16-.41.44v.91h-.36v-.92c0-.28-.12-.43-.36-.43s-.41.16-.41.44v.91h-.36v-1.65h.36v.2c.13-.19.31-.24.49-.24.25,0,.43.11.55.29.16-.23.37-.3.59-.29.41,0,.66.26.66.66h-.04Z"/>
+  <path fill="currentColor" d="M15.45,14.25s.1.08.16.12c-.98.65-2.17,1.03-3.44,1.03-3.42,0-6.2-2.74-6.2-6.13s2.78-6.13,6.2-6.13c1.27,0,2.45.37,3.44,1.02-.05.05-.1.08-.14.13-1.46,1.26-2.31,3.08-2.31,4.98s.84,3.73,2.3,4.99h0ZM19.83,3.13c-1.27,0-2.45.37-3.44,1.02.05.05.1.08.14.13,1.46,1.26,2.31,3.08,2.31,4.98s-.84,3.72-2.3,4.99c-.05.04-.1.08-.16.12.98.65,2.17,1.03,3.44,1.03,3.42,0,6.2-2.74,6.2-6.13s-2.78-6.13-6.2-6.13h0ZM16,4.45c-.08.06-.16.12-.24.19-1.3,1.13-2.13,2.78-2.13,4.62s.83,3.5,2.13,4.62c.07.07.16.13.24.19.08-.06.16-.13.24-.19,1.3-1.13,2.13-2.78,2.13-4.62s-.83-3.5-2.13-4.62c-.07-.07-.16-.13-.24-.19Z"/>
+</svg>
+
+<svg data-name="American Express Icon" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 21.9" alt="American Express Icon">
+  <path fill="currentColor" d="M29.76,21.52H2.23c-1.16,0-2.12-.95-2.12-2.12v-8.9h1.53l.34-.84h.76l.34.82h3v-.64l.27.64h1.55l.27-.65v.65h7.46v-1.36h.14c.11,0,.13.01.13.18v1.19h3.86v-.32c.4.2.86.32,1.35.32h1.71l.35-.84h.76l.34.84h3.13v-.79l.47.79h2.51v-5.21h-2.48v.61l-.34-.61h-2.54v.61l-.32-.61h-3.59c-.48,0-.95.12-1.36.32h.02v-.31h-2.38v.31c-.25-.19-.55-.31-.89-.31H7.73l-.58,1.34-.6-1.34h-2.73v.61l-.31-.61H1.2L.11,7.76V2.47C.11,1.3,1.07.35,2.23.35h27.52c1.16,0,2.12.95,2.12,2.12v9.25h-1.74c-.39,0-.74.12-1.04.31h0v-.31h-2.54c-.36,0-.71.12-.98.31h0v-.31h-4.36v.31c-.34-.19-.74-.31-1.18-.31h-2.92v.31c-.31-.2-.68-.32-1.08-.32h-3.41l-.74.8-.69-.8h-4.81v5.21h4.72l.76-.81.72.81h2.91v-1.22h.51c.36,0,.72-.07,1.04-.19h-.02v1.41h2.4v-1.35h.12c.14,0,.16,0,.16.15v1.2h7.39c.42,0,.81-.13,1.13-.34h0v.34h2.42c.44,0,.85-.09,1.22-.25h-.02v2.73c0,1.16-.95,2.12-2.12,2.12h.05ZM18.73,16.2h-.89v-3.74h2.26c.32,0,.62.07.89.19h-.01c.27.14.46.44.46.76v.06h0v.04c0,.42-.26.8-.62.95h0c.18.07.33.18.44.32h0c.09.16.15.35.15.56v.13h0v.73h-.89v-.47s.01-.12.01-.18c0-.2-.06-.4-.15-.56h0c-.14-.11-.33-.18-.53-.18h-1.09v1.36h0v.02ZM18.73,13.23v.84h1.16c.13,0,.26-.04.36-.08h0c.12-.07.19-.2.19-.34v-.05c0-.13-.07-.25-.19-.32h0c-.11-.05-.22-.07-.35-.07h-1.19v.02ZM10.77,16.2h-3.54v-3.74h3.59l1.09,1.22,1.14-1.22h2.85c1.01,0,1.51.4,1.51,1.24s-.51,1.25-1.55,1.25h-1.12v1.25h-1.74l-1.09-1.24-1.14,1.24h.01ZM13.87,12.86l-1.38,1.47,1.38,1.52v-3h0ZM8.12,14.67v.74h2.2l1.01-1.09-.98-1.09h-2.23v.68h1.96v.76h-1.96ZM14.75,13.23v.95h1.15c.35,0,.55-.18.55-.49s-.19-.46-.54-.46h-1.16ZM30.66,16.2h-1.73v-.8h1.79c.11,0,.21-.04.29-.09h0c.06-.06.11-.14.11-.24h0c0-.11-.05-.19-.11-.25-.07-.06-.16-.08-.27-.08h-.21c-.81-.02-1.72-.05-1.72-1.15,0-.54.34-1.12,1.28-1.12h1.78v.8h-1.69c-.11,0-.21.02-.29.07h0c-.08.05-.13.14-.13.24v.02h0c0,.13.08.24.2.27h0c.08.02.19.05.29.05h.68c.33,0,.64.12.88.31h0s.05.05.07.07h0v1.42c-.26.29-.64.48-1.06.48h-.16ZM27.18,16.2h-1.74v-.8h1.8c.12,0,.21-.04.31-.09h0c.06-.06.11-.14.11-.24h0c0-.11-.05-.19-.11-.25-.07-.06-.16-.08-.27-.08h-.21c-.8-.02-1.72-.05-1.72-1.15,0-.54.33-1.12,1.28-1.12h1.79v.8h-1.71c-.11,0-.21.02-.29.07h0c-.08.06-.13.15-.13.26,0,.13.08.25.19.29h0c.09.02.19.05.29.05h.67c.33,0,.65.12.88.31h0c.16.19.27.42.27.69v.09h0c0,.78-.47,1.18-1.4,1.18h-.01ZM24.91,16.2h-2.98v-3.74h2.98v.78h-2.09v.68h2.03v.76h-2.03v.74h2.09v.78h0ZM26.64,9.77h-1.82l-.35-.84h-1.86l-.34.84h-1.14c-.46,0-.87-.15-1.2-.42h0c-.31-.33-.48-.78-.48-1.26v-.18h0v-.15c0-.49.19-.95.49-1.29h0c.32-.27.73-.45,1.19-.45h1.05v.8h-.95c-.22,0-.42.08-.58.22h0c-.16.21-.26.47-.26.75v.09h0v.11c0,.28.09.55.26.76h0c.15.12.34.19.55.19h.47l1.26-2.94h1.34l1.51,3.53v-3.53h1.36l1.56,2.6v-2.6h.92v3.73h-1.27l-1.69-2.8v2.8h0v.04ZM23.56,6.67l-.61,1.49h1.24l-.61-1.49h-.01ZM14.91,9.76h-.89v-3.74h2.27c.32,0,.61.07.88.2h-.01c.27.15.46.44.46.76v.06h0v.02c0,.44-.26.8-.62.96h0c.18.07.33.18.44.32h0c.09.16.15.35.15.56v.13h0v.73h-.91v-.67c0-.19-.06-.38-.15-.53h0c-.14-.11-.33-.16-.52-.16h-1.09v1.35h0ZM14.91,6.81v.82h1.16c.13,0,.25-.04.36-.08h0c.12-.07.19-.19.19-.33v-.05c0-.13-.07-.25-.19-.31h0c-.11-.05-.22-.07-.35-.07h-1.18ZM5.45,9.76h-1.81l-.34-.84h-1.86l-.34.84H.11l1.6-3.74h1.33l1.52,3.54v-3.54h1.46l1.16,2.53,1.07-2.53h1.48v3.73h-.92v-2.92l-1.29,2.92h-.79l-1.29-2.93v2.93h.01ZM2.36,6.67l-.61,1.49h1.22l-.61-1.49ZM19.03,9.76h-.91v-3.73h.91v3.73h0ZM13.39,9.76h-2.98v-3.73h2.99v.78h-2.09v.67h2.03v.76h-2.03v.74h2.09v.78h-.01Z"/>
+</svg>
+
+<svg data-name="Paypal Icon" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 21.9" alt="Paypal Icon">
+  <path fill="currentColor" d="M7.16,7.99c-.35-.24-.8-.36-1.35-.36h-2.15c-.17,0-.26.08-.29.25l-.87,5.49s0,.11.04.14c.04.05.08.07.13.07h1.03c.18,0,.28-.08.3-.25l.24-1.48c0-.07.04-.13.1-.18.05-.05.12-.07.2-.08.08-.01.16-.02.23-.02s.16,0,.25.01c.1,0,.16.01.19.01.78,0,1.38-.22,1.82-.66.44-.43.66-1.04.66-1.81,0-.53-.17-.91-.51-1.15h0ZM6.04,9.65c-.05.31-.17.53-.35.62-.19.1-.45.14-.81.14h-.44l.23-1.42c.01-.1.07-.14.18-.14h.25c.36,0,.62.05.78.16s.22.32.16.66h.01Z"/>
+  <path fill="currentColor" d="M29.89,7.63h-.99c-.1,0-.16.05-.18.14l-.87,5.6v.02s0,.08.04.13c.04.04.08.06.13.06h.89c.17,0,.26-.08.29-.25l.87-5.5h0c0-.14-.06-.2-.18-.2h.01Z"/>
+  <path fill="currentColor" d="M17.85,9.81s-.02-.08-.05-.13c-.04-.04-.07-.06-.12-.06h-1.04c-.1,0-.18.05-.24.13l-1.42,2.11-.6-2.02c-.05-.14-.14-.22-.3-.22h-1.01s-.08.02-.12.06c-.04.04-.05.08-.05.13,0,.02.08.29.26.79.18.51.36,1.07.56,1.65.2.6.31.91.31.95-.74,1.01-1.1,1.54-1.1,1.62,0,.12.06.18.18.18h1.04c.1,0,.18-.05.24-.13l3.43-4.95s.02-.05.02-.1h-.01Z"/>
+  <path fill="currentColor" d="M27.51,9.62h-1.03c-.13,0-.2.14-.23.44-.24-.36-.66-.54-1.28-.54s-1.2.24-1.65.73-.68,1.05-.68,1.71c0,.53.16.96.47,1.27.31.31.73.47,1.24.47.26,0,.53-.06.79-.17.28-.11.48-.25.63-.43,0,0,0,.05-.02.12s-.02.13-.02.16c0,.14.06.22.18.22h.93c.17,0,.28-.08.3-.25l.55-3.52s0-.11-.04-.14c-.04-.05-.08-.07-.13-.07h-.01ZM25.75,12.27c-.23.23-.5.34-.83.34-.26,0-.47-.07-.63-.22-.17-.14-.24-.34-.24-.6,0-.34.11-.61.34-.84s.5-.35.84-.35c.25,0,.45.07.62.23.17.14.25.35.25.61,0,.32-.12.6-.35.83Z"/>
+  <path fill="currentColor" d="M12.21,9.62h-1.03c-.13,0-.2.14-.23.44-.24-.36-.67-.54-1.28-.54-.65,0-1.2.24-1.65.73s-.68,1.05-.68,1.71c0,.53.16.96.47,1.27.31.31.73.47,1.24.47.25,0,.51-.06.78-.17.28-.11.49-.25.65-.43-.04.11-.06.2-.06.29,0,.14.06.22.18.22h.93c.17,0,.28-.08.3-.25l.55-3.52s0-.11-.04-.14c-.04-.05-.08-.07-.13-.07ZM10.45,12.28c-.23.22-.51.34-.84.34-.26,0-.47-.07-.62-.22s-.24-.34-.24-.6c0-.34.11-.61.34-.84s.5-.35.84-.35c.25,0,.45.07.62.23.17.14.25.35.25.61,0,.34-.12.61-.35.83Z"/>
+  <path fill="currentColor" d="M22.45,7.99c-.35-.24-.8-.36-1.35-.36h-2.14c-.18,0-.28.08-.3.25l-.87,5.49s0,.11.04.14c.04.05.08.07.13.07h1.1c.11,0,.18-.06.22-.18l.24-1.57c0-.07.04-.13.1-.18s.12-.07.2-.08c.08-.01.16-.02.23-.02s.16,0,.25.01c.1,0,.17.01.19.01.78,0,1.38-.22,1.82-.66.44-.43.66-1.04.66-1.81,0-.53-.17-.91-.51-1.15v.02ZM21.07,10.21c-.19.13-.49.2-.89.2h-.43l.23-1.42c.01-.1.07-.14.18-.14h.24c.2,0,.36,0,.47.02.12.02.23.07.34.17s.17.23.17.41c0,.38-.1.63-.3.77Z"/>
+  <path fill="currentColor" d="M29.93,21.8H2.07c-1.08,0-1.95-.87-1.95-1.95V2.02C.12.95.99.07,2.07.07h27.86c1.08,0,1.95.87,1.95,1.95v17.83c0,1.08-.87,1.95-1.95,1.95ZM2.07.63c-.77,0-1.39.62-1.39,1.39v17.83c0,.77.62,1.4,1.39,1.4h27.86c.77,0,1.39-.62,1.39-1.4V2.02c0-.77-.62-1.39-1.39-1.39H2.07Z"/>
+</svg>
+
+
+<svg data-name="Amazon Pay Icon" xmlns="http://www.w3.org/2000/svg" width="32px" height="32px" viewBox="0 0 32 21.9" alt="Amazon Pay Icon">
+  <path fill="currentColor" d="M29.93,21.79H2.07c-1.08,0-1.95-.87-1.95-1.95V2.02C.12.95.99.07,2.07.07h27.86c1.08,0,1.95.87,1.95,1.95v17.83c0,1.08-.87,1.95-1.95,1.95h0ZM2.07.63c-.77,0-1.39.62-1.39,1.39v17.83c0,.77.62,1.39,1.39,1.39h27.86c.77,0,1.39-.62,1.39-1.39V2.02c0-.77-.62-1.39-1.39-1.39H2.07Z"/>
+  <g>
+    <path fill="currentColor" d="M20.31,14.68c-.06,0-.12.01-.18.05-.07.02-.13.06-.19.08l-.1.04-.12.05c-1.3.53-2.67.84-3.92.86h-.13c-1.99,0-3.6-.92-5.24-1.83-.06-.02-.11-.05-.17-.05-.07,0-.14.02-.2.08-.06.05-.1.13-.08.2,0,.1.05.19.13.25,1.53,1.34,3.22,2.57,5.48,2.57h.13c1.44-.04,3.06-.53,4.33-1.32h0c.17-.11.34-.22.49-.34.1-.07.17-.18.17-.3-.02-.2-.19-.35-.38-.35h-.01Z"/>
+    <path fill="currentColor" d="M22.06,13.95c0-.13-.04-.23-.08-.3h0v-.02c-.05-.06-.11-.08-.16-.11-.17-.06-.41-.1-.69-.1-.2,0-.44.02-.67.07h0l-.23.06h0l-.13.05h0c-.16.07-.3.14-.43.24-.08.06-.14.14-.16.26,0,.07.04.14.1.19s.12.06.18.06h.06c.11-.02.28-.04.48-.07.17-.02.35-.04.5-.04.11,0,.2,0,.28.02.04,0,.06.01.07.02h0v.07c0,.13-.05.36-.13.6-.07.23-.16.47-.22.62-.01.04-.02.07-.02.12,0,.06.02.13.07.19.05.05.12.07.18.07h0c.08,0,.16-.04.23-.08.59-.53.79-1.38.8-1.85v-.07h-.02Z"/>
+    <path fill="currentColor" d="M16.65,8.25c-.35.02-.74.05-1.15.11-.61.08-1.23.19-1.74.43-.99.41-1.65,1.26-1.65,2.51,0,1.58,1.02,2.38,2.3,2.38.43,0,.78-.05,1.09-.13.51-.16.93-.45,1.45-.99.3.41.37.59.89,1.02.13.05.28.05.37-.02.32-.28.89-.74,1.17-1.02.13-.11.11-.28.02-.41-.3-.37-.59-.69-.59-1.42v-2.41c0-1.02.08-1.95-.67-2.64-.61-.56-1.58-.78-2.33-.78h-.32c-1.36.08-2.81.67-3.12,2.36-.05.22.11.3.22.32l1.5.19c.16-.02.24-.16.26-.3.13-.59.61-.89,1.15-.93h.11c.32,0,.67.13.86.41.22.32.19.74.19,1.12v.22h0ZM16.35,11.43c-.19.37-.5.61-.86.69-.05,0-.13.02-.22.02-.59,0-.93-.45-.93-1.12,0-.86.5-1.26,1.15-1.45.35-.08.74-.11,1.15-.11v.32c0,.61.02,1.09-.3,1.63h.01Z"/>
+  </g>
+</svg>   
+
+
+
+  </div></footer-accordion>
+
+      
+  <footer-accordion class="accordion footer-block grid__item">
+  <p class="h4 accordion__title">Métodos de Envio</p><div class="footer-block__details-content rte">
+      
+<svg data-name="Icone Logo Correios SVG" xmlns="http://www.w3.org/2000/svg" width="100px" height="32px" viewBox="0 0 126.98 32.68" alt="Icone Logo Correios SVG">
+  <g>
+    <path fill="currentColor" d="M44.13,10.25l-6.79-8.67c-.68-.85-1.71-1.39-2.84-1.39h-1.81c.05,0,.1.01.16.02-.06,0-.12-.02-.19-.02h-13.18l8.46,10.8-8.05,10.29-.41.51h15c1.17,0,2.17-.53,2.84-1.39l6.82-8.67c.14-.21.25-.46.25-.75s-.11-.53-.25-.75Z"/>
+    <path fill="currentColor" d="M24.87,11.03l-2.23,2.76,2.23-2.79h-15c-1.17,0-2.17.53-2.84,1.39L.25,21.05c-.14.21-.25.46-.25.75s.11.53.25.75l6.75,8.67c.68.85,1.71,1.39,2.84,1.39h15.03l-8.42-10.8,8.42-10.77Z"/>
+  </g>
+  <g>
+    <path fill="currentColor" d="M86.07,12.3c-.61,0-1.09.08-1.59.23-.81.25-1.41.68-1.87,1.29-.78,1.01-.76,2.22-.76,2.22v8.43h2.25c.15,0,.25-.13.25-.25v-8c0-.15.03-.71.33-.98.25-.23.58-.33.91-.38.35-.05.71-.03.88,0h.05c.18,0,.3-.1.38-.23l1.16-1.99c-.61-.23-1.26-.35-1.99-.33"/>
+    <path fill="currentColor" d="M79.46,12.3c-.61,0-1.11.08-1.59.23-.81.25-1.41.68-1.87,1.29-.78,1.01-.76,2.22-.76,2.22v8.43h2.25c.15,0,.25-.13.25-.25v-8c0-.15.03-.71.33-.98.25-.23.58-.33.91-.38.35-.05.71-.03.88,0h.05c.15,0,.3-.1.38-.23l1.19-2.02c-.66-.2-1.29-.33-2.02-.3"/>
+    <path fill="currentColor" d="M59.83,21.36c-.08-.1-.23-.18-.38-.18-.08,0-.18.03-.23.08h0c-.76.45-1.67.73-2.62.73-2.83,0-5.12-2.3-5.12-5.15s2.3-5.12,5.12-5.12c.96,0,1.87.25,2.62.73.08.05.15.08.25.08.15,0,.28-.08.38-.18l1.29-1.67c-1.26-.93-2.83-1.49-4.54-1.49-4.24,0-7.67,3.43-7.67,7.67s3.43,7.67,7.67,7.67c1.69,0,3.26-.56,4.54-1.49l-1.31-1.69h0Z"/>
+    <path fill="currentColor" d="M93.92,14.55h0c1.67,0,3.08,1.09,3.58,2.57h-7.14c.5-1.49,1.92-2.57,3.56-2.57M93.92,12.12c-3.41,0-6.18,2.78-6.18,6.18s2.78,6.16,6.18,6.18h.18c1.34,0,2.42-.18,3.86-1.11l.23-.15s-1.26-1.64-1.29-1.67c-.08-.1-.23-.18-.35-.18-.08,0-.15.03-.23.05-.33.18-1.31.61-2.4.61-1.64,0-3.03-1.03-3.56-2.5h9.46c.15,0,.25-.13.25-.25l.03-.71v-.28c.03-3.41-2.75-6.18-6.18-6.18Z"/>
+    <path fill="currentColor" d="M101.82,24.51c-.15,0-.25-.1-.25-.25v-11.48c0-.13.1-.25.25-.25h1.99c.15,0,.25.13.25.25v11.48c0,.15-.13.25-.25.25h-1.99Z"/>
+    <path fill="currentColor" d="M67.78,14.49h0c-2.07,0-3.73,1.67-3.73,3.73s1.67,3.73,3.73,3.73,3.73-1.67,3.73-3.73-1.67-3.73-3.73-3.73M67.78,24.51c-3.46,0-6.26-2.8-6.26-6.26s2.8-6.26,6.26-6.26,6.26,2.8,6.26,6.26-2.8,6.26-6.26,6.26Z"/>
+    <path fill="currentColor" d="M111.53,14.6h0c-2.04,0-3.71,1.67-3.71,3.71s1.67,3.68,3.71,3.68,3.71-1.67,3.71-3.68-1.67-3.71-3.71-3.71M111.53,24.49c-3.43,0-6.21-2.78-6.21-6.21s2.78-6.21,6.21-6.21,6.21,2.78,6.21,6.21-2.78,6.21-6.21,6.21Z"/>
+    <path fill="currentColor" d="M124.78,17.35c-.43-.2-.98-.33-1.59-.48-.88-.23-1.72-.28-2.02-.76-.28-.45-.13-.96.25-1.24.88-.61,2.07-.35,2.73-.05.13.05.61.33.61.33.08.05.15.08.23.08.15,0,.28-.08.38-.2l1.26-1.62-.2-.18c-.13-.1-.3-.2-.48-.3-.38-.2-1.51-.86-3.15-.86h-.15c-3.61.08-4.11,2.62-4.11,3.53,0,1.36.71,2.35,1.77,2.95.86.48,2.45.76,3.26,1.01.43.13.73.43.86.71.05.13.08.25.08.4.03.48-.23,1.01-.93,1.24-.78.23-1.99.13-3.1-.73-.03-.03-.15-.13-.2-.15-.05-.03-.1-.03-.18-.03-.15,0-.28.08-.38.2-.03.03-1.24,1.59-1.24,1.59,0,0,.43.35.58.45.71.53,1.97,1.24,3.61,1.24h.05c3.48,0,4.29-2.47,4.29-3.84s-.83-2.7-2.2-3.31"/>
+  </g>
+</svg>
+
+  </div></footer-accordion>
+
+  <footer-accordion class="accordion footer-block grid__item">
+  <p class="h4 accordion__title">Redes Sociais</p><div class="footer-block__details-content">
+      
+        <div class="footer-block__details-content">
+          <ul class="footer__list-social list-unstyled list-social" role="list">
+            {% render 'social-icons' %}
+            <li class="list-social__item--placeholder">{{ 'sections.footer.social_placeholder' | t }}</li>
+          </ul>
+          </div>
+        </div></footer-accordion>
+
+
+</div>
+
+
+
+    
+          </div>
+        {%- endif -%}
+
+        {%- if enable_right_column -%}
+          <div class="grid__item footer__content-right">
+            <div class="grid">
+              {%- if section.blocks.size > 0 -%}
+                <div class="grid__item small-hide">
+                  <div></div>
+                </div>
+              {%- endif -%}
+              <div class="grid__item">
+                {%- if section.settings.newsletter_enable -%}
+                  <footer-accordion class="accordion footer-block--newsletter" data-open>
+                    <details open>
+                      <summary tabindex="-1">
+                        <p class="h4 accordion__title">{{ section.settings.newsletter_heading | escape }}</p>
+                        {% render 'icon', icon: 'caret' %}
+                      </summary>
+                      <div class="footer-block__details-content">
+                        <div class="footer-block__newsletter">
+                          {%- assign return_url = section.settings.return_url | default: 'back' | append: '' -%}
+                          {%- form 'customer', id: 'ContactFooter', class: 'footer__newsletter newsletter-form', return_to: return_url -%}
+                            <input type="hidden" name="contact[tags]" value="newsletter"/>
+
+                            <div class="field">
+                              <input
+                                id="ContactFooter-email"
+                                type="email"
+                                name="contact[email]"
+                                class="field__input required{% if form.errors %} invalid{% endif %}"
+                                value="{{ form.email }}"
+                                aria-required="true"
+                                autocorrect="off"
+                                autocapitalize="off"
+                                autocomplete="email"
+                                {% if form.errors %}
+                                  autofocus
+                                  aria-invalid="true"
+                                  aria-describedby="ContactFooter-error"
+                                {% elsif form.posted_successfully? %}
+                                  aria-describedby="ContactFooter-success"
+                                {% endif %}
+                                placeholder="{{ 'newsletter.label' | t }}"
+                                required
+                              />
+                              <label class="visually-hidden" for="ContactFooter-email">{{ 'newsletter.label' | t }}</label>
+                              <button type="submit" class="button button--arrow field__button animate-arrow" name="commit" aria-label="{{ 'newsletter.button_label' | t }}">
+                                {% render 'icon', icon: 'arrow' %}
+                              </button>
+                            </div>
+                            {%- if form.errors -%}
+                              <small class="form__message errors" id="ContactFooter-error">
+                                {% render 'icon', icon: 'error' %}
+                                {{ form.errors.translated_fields['email'] | capitalize }} {{ form.errors.messages['email'] }}
+                              </small>
+                            {%- endif -%}
+                            
+                            <div class="typeset rte">
+                              {{ section.settings.newsletter_text }}
+                            </div>
+
+                            {%- if form.posted_successfully? -%}
+                              <p class="form__message h3" id="ContactFooter-success" tabindex="-1" autofocus>
+                                {% render 'icon', icon: 'success' %}
+                                {{ 'newsletter.success' | t }}
+                              </p>
+                            {%- endif -%}
+                            
+                          {%- endform -%}
+                        </div>
+                        {%- if section.settings.show_social -%}
+                          <p class="h4 accordion__title">{{ section.settings.social_heading | escape }}</p>
+                          <ul class="footer__list-social list-unstyled list-social" role="list">
+                            {% render 'social-icons' %}
+                            <li class="list-social__item--placeholder">{{ 'sections.footer.social_placeholder' | t }}</li>
+                          </ul>
+                        {%- endif -%}
+                        {%- if shop.features.follow_on_shop? and section.settings.enable_follow_on_shop -%}
+                          <div class="footer__follow-on-shop">
+                            {% comment %} TODO: enable theme-check once `login_button` is accepted as valid filter {% endcomment %}
+                            {% # theme-check-disable %}
+                            {{ shop | login_button: action: 'follow' }}
+                            {% # theme-check-enable %}
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    </details>
+                  </footer-accordion>
+                {%- else -%}
+                  <footer-accordion class="accordion footer-block--social" data-open>
+                    <details open>
+                      <summary tabindex="-1">
+                        <p class="h4 accordion__title">{{ section.settings.social_heading | escape }}</p>
+                        {% render 'icon', icon: 'caret' %}
+                      </summary>
+                      <div class="footer-block__details-content">
+                        <ul class="footer__list-social list-unstyled list-social" role="list">
+                          {% render 'social-icons' %}
+                          <li class="list-social__item--placeholder">{{ 'sections.footer.social_placeholder' | t }}</li>
+                        </ul>
+                        </div>
+                    </details>
+                  </footer-accordion>
+                {%- endif -%}
+              </div>
+            </div>
+          </div>
+        {%- endif -%}
+      </div>
+    </div>
+  {%- endif -%}
+
+  <div class="footer__content-bottom">
+    <div class="footer__content-bottom-wrapper page-width">
+      <div class="footer__column footer__column--info">
+        <div class="footer__copyright">
+          <small class="copyright__content">{{ section.settings.copyright_text }}</small>
+          <ul class="policies list-unstyled">
+            {%- if section.settings.show_policy -%}
+              {%- for policy in shop.policies -%}
+                {%- if policy != blank -%}
+                  <li><small class="copyright__content"><a href="{{ policy.url }}">{{ policy.title }}</a></small></li>
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+          </ul>
+        </div>
+      </div>
+     
+    </div>
+  </div>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "class": "shopify-section-footer",
+  "max_blocks": 4,
+  "blocks": [
+    {
+      "type": "link_list",
+      "name": "t:sections.footer.blocks.link_list.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Quick links",
+          "label": "t:sections.footer.blocks.link_list.settings.heading.label",
+          "info": "t:sections.footer.blocks.link_list.settings.heading.info"
+        },
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "name": "t:sections.footer.blocks.text.name",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "t:sections.footer.blocks.text.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>Share information about your brand with your customers.</p>",
+          "label": "t:sections.footer.blocks.text.settings.subtext.label"
+        }
+      ]
+    },
+    {
+      "type": "atendimento",
+      "name": "Atendimento",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "default": "Heading",
+          "label": "t:sections.footer.blocks.text.settings.heading.label"
+        },
+        {
+          "type": "richtext",
+          "id": "subtext",
+          "default": "<p>Share information about your brand with your customers.</p>",
+          "label": "t:sections.footer.blocks.text.settings.subtext.label"
+        }
+      ]
+    },
+    {
+      "type": "image",
+      "name": "t:sections.footer.blocks.image.name",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "t:sections.footer.blocks.image.settings.image.label"
+        },
+        {
+          "type": "range",
+          "id": "image_width",
+          "min": 50,
+          "max": 200,
+          "step": 5,
+          "unit": "t:sections.footer.blocks.image.settings.image_width.unit",
+          "label": "t:sections.footer.blocks.image.settings.image_width.label",
+          "default": 100
+        },
+        {
+          "type": "select",
+          "id": "alignment",
+          "options": [
+            {
+              "value": "left",
+              "label": "t:sections.footer.blocks.image.settings.alignment.options__1.label"
+            },
+            {
+              "value": "center",
+              "label": "t:sections.footer.blocks.image.settings.alignment.options__2.label"
+            },
+            {
+              "value": "right",
+              "label": "t:sections.footer.blocks.image.settings.alignment.options__3.label"
+            }
+          ],
+          "label": "t:sections.footer.blocks.image.settings.alignment.label",
+          "info": "t:sections.footer.blocks.image.settings.alignment.info",
+          "default": "left"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "t:sections.footer.blocks.image.settings.link.label"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.footer.blocks.image.settings.text.label"
+        }
+      ]
+    }
+  ],
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_divider",
+      "default": true,
+      "label": "t:sections.all.show_divider.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__1.content",
+      "info": "t:sections.footer.settings.header__1.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "newsletter_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.newsletter_enable.label"
+    },
+    {
+      "type": "text",
+      "id": "newsletter_heading",
+      "default": "Sign up to our emails",
+      "label": "t:sections.footer.settings.newsletter_heading.label"
+    },
+    {
+      "type": "richtext",
+      "id": "newsletter_text",
+      "label": "t:sections.footer.settings.newsletter_text.label",
+      "default": "<p>Subscribe to get special offers, free giveaways, and once-in-a-lifetime deals.</p>"
+    },
+    {
+      "type": "url",
+      "id": "return_url",
+      "label": "t:sections.all.form.return_url.label",
+      "info": "t:sections.all.form.return_url.info"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__7.content",
+      "info": "t:sections.footer.settings.header__7.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_follow_on_shop",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_follow_on_shop.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__2.content",
+      "info": "t:sections.footer.settings.header__2.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_social",
+      "default": true,
+      "label": "t:sections.footer.settings.show_social.label"
+    },
+    {
+      "type": "text",
+      "id": "social_heading",
+      "label": "t:sections.footer.settings.social_heading.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__3.content",
+      "info": "t:sections.footer.settings.header__3.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_country_selector",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_country_selector.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__4.content",
+      "info": "t:sections.footer.settings.header__4.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_language_selector",
+      "default": true,
+      "label": "t:sections.footer.settings.enable_language_selector.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__5.content"
+    },
+    {
+      "type": "checkbox",
+      "id": "payment_enable",
+      "default": true,
+      "label": "t:sections.footer.settings.payment_enable.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.footer.settings.header__6.content",
+      "info": "t:sections.footer.settings.header__6.info"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_policy",
+      "default": false,
+      "label": "t:sections.footer.settings.show_policy.label"
+    },
+    {
+      "type": "text",
+      "id": "copyright_text",
+      "default": "All rights reserved.",
+      "label": "t:sections.footer.settings.copyright_text.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.all.colors.header.content"
+    },
+    {
+      "type": "color",
+      "id": "colors_text",
+      "label": "t:sections.all.colors.colors_text.label",
+      "default": "#42474c"
+    },
+    {
+      "type": "color",
+      "id": "colors_heading",
+      "label": "t:sections.all.colors.colors_heading.label",
+      "default": "#6b7177"
+    },
+    {
+      "type": "color",
+      "id": "colors_link",
+      "label": "t:sections.all.colors.colors_link.label",
+      "default": "#212326"
+    },
+    {
+      "type": "color",
+      "id": "colors_border",
+      "label": "t:sections.all.colors.colors_line.label",
+      "default": "#d2d5d9"
+    },
+    {
+      "type": "color",
+      "id": "colors_background",
+      "label": "t:sections.all.colors.colors_background.label",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color_background",
+      "id": "gradient_background",
+      "label": "t:sections.all.colors.gradient_background.label"
+    }
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "link_list"
+      }
+    ]
+  },
+  "enabled_on": {
+    "groups": ["footer"]
+  }
+}
+{% endschema %}

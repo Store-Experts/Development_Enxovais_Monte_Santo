@@ -1,0 +1,24 @@
+<div class="page-width" {{ block.shopify_attributes }}>
+<h2 class="title h2">Descrição</h2>
+<div class="product__description">{{ product.description }}</div>
+</div>
+
+{% schema %}
+{
+  "name": "Product Description",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+  ],
+  "presets": [
+    {
+      "name": "Product Description",
+      "blocks": [
+      ]
+    }
+  ],
+  "disabled_on": {
+    "groups": ["header", "footer", "custom.overlay"]
+  }
+}
+{% endschema %}

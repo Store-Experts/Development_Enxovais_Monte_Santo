@@ -1,0 +1,87 @@
+{% comment %}
+  Renders a swatch component.
+  Accepts:
+  - product: {Object} product object.
+  - option: {Object} product_option object
+  - value: {ProductOptionValueDrop} input value (optional)
+  - source: {String} swatch source. Accepts 'file' or 'variant', defaults to variant.
+  - shape: {String} swatch shape. Accepts 'square' or 'round', defaults to round.
+
+  Usage:
+  {% render 'swatch-custom',
+    product: product,
+    option: product_option,
+    source: 'variant'
+    shape: 'round'
+  %}
+{% endcomment %}
+
+{% if product and option %}
+  {%- liquid
+    if value == blank
+      assign value = option.selected_value
+    endif
+    assign swatch_value = value | split: ' ' | last | handle 
+    comment
+      fall-back value ↑ or null?
+    endcomment
+
+    assign swatch_source = source | default: 'variant'
+    assign swatch_shape = shape | default: 'round'
+    assign color_variant_image = ''
+
+    if swatch_source == 'variant'
+      if value.variant.image
+        assign color_variant_image = value.variant.image | image_url: width: 50
+        assign swatch_value = 'url(' | append: color_variant_image | append: ')'
+      endif
+    else
+      assign swatch_file_extension = 'png'
+      assign file_name_uniq = product.id | append: '_' | append: value | handle | append: '.' | append: swatch_file_extension
+      assign file_name_custom = blank
+      assign file_name_alt = value | handle | append: '.' | append: swatch_file_extension
+      assign value_downcase = value | downcase
+      assign swatch_config = settings.swatch_config | newline_to_br | split: '<br />'
+      for swatch in swatch_config
+        assign swatch_parts = swatch | strip | split: ':'
+        assign swatch_name = swatch_parts.first | downcase | strip
+        if swatch_name == value_downcase
+          assign swatch_entry = swatch_parts.last | strip
+          if swatch_entry contains '#'
+            assign swatch_value = swatch_entry
+            assign file_name_alt = blank
+          else
+            assign file_name_custom = swatch_entry
+          endif
+          break
+        endif
+      endfor
+      assign file_name_final = blank
+      if images[file_name_uniq] != blank
+        assign file_name_final = file_name_uniq
+      elsif file_name_custom != blank and images[file_name_custom] != blank 
+        assign file_name_final = file_name_custom
+      elsif images[file_name_alt] != blank
+        assign file_name_final = file_name_alt
+      endif
+      assign swatch_image = blank
+      if images[file_name_final] != blank
+        assign swatch_image = images[file_name_final] | image_url: width: 50
+      elsif file_name_final contains '//cdn.shopify.com/'
+        assign swatch_image = file_name_final
+      endif 
+      if swatch_image != blank
+        assign swatch_value = 'url(' | append: swatch_image | append: ')'
+      endif
+    endif
+  -%}
+
+  <span
+    {% if swatch_value %}
+      class="swatch{% if swatch_shape == 'square' %} swatch--square{% endif %}"
+      style="--swatch--background: {{ swatch_value }};"
+    {% else %}
+      class="swatch swatch--unavailable{% if swatch_shape == 'square' %} swatch--square{% endif %}"
+    {% endif %}
+  ></span>
+{% endif %}

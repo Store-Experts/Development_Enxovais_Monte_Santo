@@ -1,0 +1,175 @@
+{% comment %}
+  Renders product variant options
+
+  Accepts:
+  - product: {Object} product object.
+  - option: {Object} current product_option object.
+  - block: {Object} block object.
+  - picker_type: {String} type of picker to dispay
+
+
+  Usage:
+  {% render 'product-variant-options',
+    product: product,
+    option: option,
+    block: block
+    picker_type: picker_type
+  %}
+{% endcomment %}
+{%- liquid
+  assign product_form_id = 'product-form-' | append: section.id
+-%}
+
+{%- for value in option.values -%}
+  {%- liquid
+    assign swatch_focal_point = null
+
+    assign swatch_value = value | split: ' ' | last | handle 
+    comment
+      fall-back value ↑ or null?
+    endcomment
+    
+    if block.settings.swatch_source == 'native'
+      if value.swatch.image
+        assign image_url = value.swatch.image | image_url: width: 50
+        assign swatch_value = 'url(' | append: image_url | append: ')'
+        assign swatch_focal_point = value.swatch.image.presentation.focal_point
+      elsif value.swatch.color
+        assign swatch_value = 'rgb(' | append: value.swatch.color.rgb | append: ')'
+      else
+        assign swatch_value = null
+      endif
+    else
+      if block.settings.swatch_source == 'variant'
+        if value.variant.image
+          assign color_variant_image = value.variant.image | image_url: width: 50
+          assign swatch_value = 'url(' | append: color_variant_image | append: ')'
+        endif
+      else
+        assign swatch_file_extension = 'png'
+        assign file_name_uniq = product.id | append: '_' | append: value | handle | append: '.' | append: swatch_file_extension
+        assign file_name_custom = blank
+        assign file_name_alt = value | handle | append: '.' | append: swatch_file_extension
+        assign value_downcase = value | downcase
+        assign swatch_config = settings.swatch_config | newline_to_br | split: '<br />'
+        for swatch in swatch_config
+          assign swatch_parts = swatch | strip | split: ':'
+          assign swatch_name = swatch_parts.first | downcase | strip
+          if swatch_name == value_downcase
+            assign swatch_entry = swatch_parts.last | strip
+            if swatch_entry contains '#'
+              assign swatch_value = swatch_entry
+              assign file_name_alt = blank
+            else
+              assign file_name_custom = swatch_entry
+            endif
+            break
+          endif
+        endfor
+        assign file_name_final = blank
+        if images[file_name_uniq] != blank
+          assign file_name_final = file_name_uniq
+        elsif file_name_custom != blank and images[file_name_custom] != blank 
+          assign file_name_final = file_name_custom
+        elsif images[file_name_alt] != blank
+          assign file_name_final = file_name_alt
+        endif
+        assign swatch_image = blank
+        if images[file_name_final] != blank
+          assign swatch_image = images[file_name_final] | image_url: width: 50
+        elsif file_name_final contains '//cdn.shopify.com/'
+          assign swatch_image = file_name_final
+        endif 
+        if swatch_image != blank
+          assign swatch_value = 'url(' | append: swatch_image | append: ')'
+        endif
+      endif
+    endif
+
+    assign option_disabled = true
+    if value.available
+      assign option_disabled = false
+    endif
+  -%}
+
+  {%- capture input_id -%}
+      {{ section.id }}-{{ option.position }}-{{ forloop.index0 -}}
+    {%- endcapture -%}
+
+  {%- capture input_name -%}
+      {{ option.name }}-{{ option.position }}
+    {%- endcapture -%}
+
+  {%- capture input_dataset -%}
+      data-product-url="{{ value.product_url }}"
+      data-option-value-id="{{ value.id }}"
+      {% if option_disabled %}data-crossout{% unless block.settings.enable_swatch_unavailable_click %} disabled{% endunless %}{% endif %}
+    {%- endcapture -%}
+
+  {%- capture label_unavailable -%}
+      <span class="visually-hidden label-unavailable">
+        {{- 'products.product.variant_sold_out_or_unavailable' | t -}}
+      </span>
+    {%- endcapture -%}
+
+  {%- if picker_type == 'swatch' -%}
+    {%- capture help_text -%}
+      <span class="visually-hidden">{{ value | escape }}</span>
+      {{ label_unavailable }}
+    {%- endcapture -%}
+    {%
+      render 'swatch-input',
+      id: input_id,
+      name: input_name,
+      value: value | escape,
+      swatch: value.swatch,
+      product_form_id: product_form_id,
+      checked: value.selected,
+      visually_disabled: option_disabled,
+      shape: block.settings.swatch_type,
+      source: block.settings.swatch_source,
+      option: option,
+      product: product,
+      help_text: help_text,
+      additional_props: input_dataset
+    %}
+  {%- elsif picker_type == 'button' -%}
+    <input
+      type="radio"
+      id="{{ input_id }}"
+      name="{{ input_name | escape }}"
+      value="{{ value | escape }}"
+      form="{{ product_form_id }}"
+      {% if value.selected %}
+        checked
+      {% endif %}
+      class="button-input__input{% if option_disabled %} disabled{% endif %}"   
+      {{ input_dataset }}
+    >
+    <label for="{{ input_id }}">
+      {{ value -}}
+      {{ label_unavailable }}
+    </label>
+  {%- elsif picker_type == 'dropdown' or picker_type == 'swatch_dropdown' -%}
+    <option
+      id="{{ input_id }}"
+      value="{{ value | escape }}"
+      {% if value.selected %}
+        selected="selected"
+      {% endif %}
+      {% if swatch_value and picker_type == 'swatch_dropdown' %}
+        data-option-swatch-value="{{ swatch_value }}"
+        {% if swatch_focal_point %}
+          data-option-swatch-focal-point="{{ swatch_focal_point }}"
+        {% endif %}
+      {% endif %}
+      {{ input_dataset }}
+    >
+      {% if option_disabled -%}
+        {{- 'products.product.value_unavailable' | t: option_value: value -}}
+      {%- else -%}
+        {{- value -}}
+      {%- endif %}
+    </option>
+  {%- endif -%}
+{%- endfor -%}

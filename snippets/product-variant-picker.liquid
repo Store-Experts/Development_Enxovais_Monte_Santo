@@ -1,0 +1,191 @@
+{% comment %}
+  Renders product variant-picker
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+
+<div class="variant-products-images">
+  {% assign variantes = product.metafields.custom.variantes_com_imagem.value %}
+  {% assign titulo_variacao = product.metafields.custom.titulo_da_variante.value | default: "COR" %}
+  {% if variantes != blank %}
+{% assign sibling_size = product.metafields.custom.sibling_color.value %}
+<legend class="size-title form__label">
+  {{ titulo_variacao }}{% if sibling_size != blank %} - {{ sibling_size }}{% endif %}
+</legend>
+
+    <div class="variant-products-images__list">
+      {% for item in variantes %}
+        {% if item.id == product.id %}
+          <div class="variant-products-images__item is-current" title="{{ item.title }}">
+            <img src="{{ item.featured_image | image_url: width: 88 }}" alt="{{ item.title }}">
+          </div>
+        {% else %}
+          <a href="{{ item.url }}" class="variant-products-images__item" title="{{ item.title }}">
+            <img src="{{ item.featured_image | image_url: width: 88 }}" alt="{{ item.title }}">
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>
+
+{%- unless product.has_only_default_variant -%}
+  <variant-selects data-primary
+    id="variant-selects-{{ section.id }}"
+    data-section="{{ section.id }}"
+    {{ block.shopify_attributes }}
+  >
+    {%- for option in product.options_with_values -%}
+      {%- liquid
+        assign picker_type = block.settings.picker_type
+        
+        if block.settings.swatch_type != 'none'
+          assign native_swatch_eligible = false
+          assign custom_swatch_eligible = false
+          if block.settings.swatch_source == 'native'
+            assign native_swatch_count = option.values | map: 'swatch' | compact | size
+            if native_swatch_count > 0
+              assign native_swatch_eligible = true
+            endif
+          else
+            assign custom_swatch_trigger = 'products.product.color_swatch_trigger' | t | downcase
+            assign downcased_option = option.name | downcase
+            if custom_swatch_trigger contains downcased_option
+              assign custom_swatch_eligible = true
+            endif
+          endif
+
+          if native_swatch_eligible == true or custom_swatch_eligible == true
+            if block.settings.picker_type == 'dropdown'
+              assign picker_type = 'swatch_dropdown'
+            else
+              assign picker_type = 'swatch'
+            endif
+          endif
+        endif
+
+        assign is_size = false
+        if block.settings.size_chart != blank
+          assign size_trigger = 'products.product.size_chart_trigger' | t | downcase
+          assign downcased_option = option.name | downcase
+          if size_trigger contains downcased_option
+            assign is_size = true
+          endif
+        endif
+      -%}
+
+      {%- capture sizechart_cta -%}
+        {%- if is_size -%}
+          <div class="form__popup" id="size-{{ section.id }}">
+            <modal-opener class="no-js-hidden" data-modal="#PopupModal-{{ block.id }}" {{ block.shopify_attributes }}>
+              <button id="ProductPopup-{{ block.id }}" class="link link-with-icon" type="button" aria-haspopup="dialog">
+                {% render 'icon', icon: 'ruler' %}
+                <span class="label">{{ 'products.product.size_chart' | t | default: block.settings.size_chart.title }}</span>
+              </button>
+            </modal-opener>
+            <a href="{{ block.settings.size_chart.url }}" class="link link-with-icon no-js">
+              {% render 'icon', icon: 'ruler' %}
+              <span class="label">{{ 'products.product.size_chart' | t | default: block.settings.size_chart.title }}</span>
+            </a>
+          </div>
+        {%- endif -%}
+      {%- endcapture -%}
+
+      {%- if picker_type == 'swatch' -%}
+        <fieldset class="js product-form__input product-form__input--swatch">
+          {%- if block.settings.show_variant_labels -%}
+            <legend class="form__label">
+              {{ option.name }}:
+              <span data-selected-value>
+                <b>{{- option.selected_value -}}</b>
+              </span>
+            </legend>
+          {%- endif -%}
+          {% render 'product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
+          {{- sizechart_cta -}}
+        </fieldset>
+      {%- elsif picker_type == 'button' -%}
+        <fieldset class="js product-form__input product-form__input--pill">
+          {%- if block.settings.show_variant_labels -%}
+          <legend class="form__label">{{ option.name }}:&nbsp;<b>{{- option.selected_value -}}</b></legend>
+          {%- endif -%}
+          {% render 'product-variant-options',
+            product: product,
+            option: option,
+            block: block,
+            picker_type: picker_type
+          %}
+          {{- sizechart_cta -}}
+          
+{% if product.metafields.custom.medidas_adicionais == true %}
+  <a href="https://wa.me/47996544205"
+     target="_blank"
+     class="button-sizes"
+     id="special-measurement-button"
+  >
+    <svg data-name="WhatsApp Icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.12 14.77" width="13px" style="margin-right: 4px;">
+      <path fill="currentColor" d="M1.76,7.38C1.76,4.08,4.44,1.41,7.74,1.41s5.98,2.68,5.98,5.98-2.68,5.98-5.98,5.98c-1.18,0-2.27-.34-3.19-.92-.17-.11-.38-.14-.58-.08l-2.02.6.76-1.78c.09-.21.07-.45-.05-.65-.57-.91-.89-1.99-.89-3.15h0ZM7.74,0C3.66,0,.36,3.31.36,7.38c0,1.29.33,2.51.92,3.57L.06,13.79c-.11.25-.06.54.12.74.18.2.46.28.73.21l3.16-.94c1.08.62,2.33.97,3.67.97,4.08,0,7.38-3.31,7.38-7.38S11.82,0,7.74,0ZM9.35,8.92l-.92.65c-.43-.25-.91-.59-1.39-1.07-.5-.5-.87-1.01-1.14-1.49l.59-.5c.25-.21.32-.57.17-.87l-.75-1.41c-.1-.19-.28-.32-.49-.36-.21-.04-.43.02-.59.16l-.22.19c-.53.47-.85,1.23-.59,2.01.27.8.85,2.07,2.03,3.25,1.28,1.28,2.57,1.78,3.33,1.97.61.16,1.19-.05,1.59-.39l.42-.34c.18-.14.27-.37.26-.6-.02-.23-.14-.44-.34-.55l-1.18-.7c-.24-.14-.54-.13-.76.03l-.02.02Z"/>
+    </svg>
+    Medida personalizada
+  </a>
+{% endif %}
+
+
+        </fieldset>
+      {%- else -%}
+        <div class="product-form__input product-form__input--dropdown">
+          {%- if block.settings.show_variant_labels -%}
+            <label class="form__label" for="Option-{{ section.id }}-{{ forloop.index0 }}">
+              {{ option.name }}
+            </label>
+          {%- endif -%}
+          <div class="select">
+            {%- if picker_type == 'swatch_dropdown' -%}
+              <span
+                data-selected-value
+                class="dropdown-swatch"
+              >
+                {% if block.settings.swatch_source == 'native' %}
+                  {% render 'swatch', swatch: option.selected_value.swatch, shape: block.settings.swatch_type %}
+                {% else %}
+                  {% render 'swatch-custom', product: product, option: option, source: block.settings.swatch_source, shape: block.settings.swatch_type %}
+                {% endif %}
+              </span>
+            {%- endif -%}
+            <select
+              id="Option-{{ section.id }}-{{ forloop.index0 }}"
+              class="select__select"
+              name="options[{{ option.name | escape }}]"
+              form="{{ product_form_id }}"
+            >
+              {% render 'product-variant-options',
+                product: product,
+                option: option,
+                block: block,
+                picker_type: picker_type
+              %}
+            </select>
+            <span class="svg-wrapper">
+              {{- 'icon-caret.svg' | inline_asset_content -}}
+            </span>
+          </div>
+          {{- sizechart_cta -}}
+        </div>
+      {%- endif -%}
+    {%- endfor -%}
+
+    <script type="application/json" data-selected-variant>
+      {{ product.selected_or_first_available_variant | json }}
+    </script>
+  </variant-selects>
+{%- endunless -%}
