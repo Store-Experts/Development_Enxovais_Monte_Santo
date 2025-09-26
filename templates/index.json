@@ -1,1 +1,935 @@
-{"sections":{"slideshow_ecBq7T":{"type":"slideshow","blocks":{"image_wRRpRg":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banner_Teste_01_04.jpg","image_position":"20% 50%","text_box_position":"middle-left","subheading":"Linha Completa","subheading_size":"h5","heading":"Para sua cama","heading_size":"h0","heading_tag":"h2","text":"Jogos de cama, colchas, lençóis, cobertores e muito mais!","text_size":"typeset","button_label":"Conferir","button_link":"shopify:\/\/collections\/cama","button_size":"small","button_style_secondary":false}},"image_YgpNdB":{"type":"image","disabled":true,"settings":{"image_position":"20% 100%","text_box_position":"middle-right","subheading":"Confira as nossas","subheading_size":"h5","heading":"Ofertas de Inverno","heading_size":"h0","heading_tag":"h2","text":"Edredons, lençóis, toalhas de banho e muito mais!","text_size":"typeset","button_label":"Conferir","button_link":"shopify:\/\/collections\/inverno","button_size":"small","button_style_secondary":true}}},"block_order":["image_wRRpRg","image_YgpNdB"],"settings":{"slideshow_type":"legacy","text_alignment":"center","image_ratio":"650px","autorotate":true,"autorotate_speed":7,"full_width":true,"image_behavior":"none","mobile_text_alignment":"left","mobile_image_ratio":"500px","show_text_below":false,"colors_button_label":"#ffffff","colors_button_background":"#006ab3","colors_text":"#ffffff","colors_background":"#ffffff","colors_overlay":"#000000","colors_overlay_opacity":0,"colors_navigation_text":"#ffffff","colors_navigation_background":"#ffffff","padding_top":0,"padding_bottom":0}},"guarantees_tEga33":{"type":"guarantees","blocks":{"guarantee_RGWEVT":{"type":"guarantee","settings":{"icon":"truck","icon_size":"small","custom_icon":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 640 512\"><path d=\"M64 416C28.65 416 0 387.3 0 352V64C0 28.65 28.65 0 64 0H352C387.3 0 416 28.65 416 64V96H481.3C495.3 96 508.6 102.1 517.7 112.8L596.4 204.6C603.9 213.3 608 224.4 608 235.8V384H624C632.8 384 640 391.2 640 400C640 408.8 632.8 416 624 416H576C576 469 533 512 480 512C426.1 512 384 469 384 416H255.1C255.1 469 213 512 159.1 512C106.1 512 63.1 469 63.1 416H64zM32 64V352C32 369.7 46.33 384 64 384H69.46C82.64 346.7 118.2 320 160 320C201.8 320 237.4 346.7 250.5 384H384V64C384 46.33 369.7 32 352 32H64C46.33 32 32 46.33 32 64zM570.9 224L493.4 133.6C490.4 130 485.1 128 481.3 128H416V224H570.9zM416 256V344.4C432.1 329.2 455.4 320 480 320C521.8 320 557.4 346.7 570.5 384H576V256H416zM160 352C124.7 352 96 380.7 96 416C96 451.3 124.7 480 160 480C195.3 480 224 451.3 224 416C224 380.7 195.3 352 160 352zM480 480C515.3 480 544 451.3 544 416C544 380.7 515.3 352 480 352C444.7 352 416 380.7 416 416C416 451.3 444.7 480 480 480z\"><\/path><\/svg>","title":"Frete Grátis","title_size":"h4","text":"<p><a href=\"\/pages\/como-comprar#frete-gratis\" title=\"\/pages\/como-comprar#frete-gratis\">Confira aqui as condições<\/a><\/p>"}},"guarantee_qEjzVM":{"type":"guarantee","settings":{"icon":"map_pin","icon_size":"small","custom_icon":"","title":"Onde Comprar","title_size":"h4","text":"<p><a href=\"\/pages\/loja-mais-proxima\" title=\"Loja mais próxima\">Consulte nossas lojas<\/a><\/p>"}},"guarantee_FrCiHq":{"type":"guarantee","settings":{"icon":"stopwatch","icon_size":"small","custom_icon":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 512 512\"><path d=\"M191.1 224c0-17.62-14.37-32.04-32-32.04l-32.01 0c-35.38 0-64 28.62-64 63.1L63.96 319.6c0 35.38 28.63 64 64.01 64h32c17.63 0 32-14.38 32-32L191.1 224zM159.1 351.6h-32c-17.63 0-32-14.38-32-32V256c0-17.62 14.38-32 32-32l32.02-.0001L159.1 351.6zM383.1 383.6c35.38 0 64.01-28.62 64.01-64l.0026-63.63c0-35.38-28.62-63.1-64-63.1l-31.1 0c-17.63 0-32 14.42-32 32.04l-.0105 127.6c0 17.62 14.38 32 32 32H383.1zM351.1 224l31.1 .0001c17.63 0 32 14.38 32 32V319.6c0 17.62-14.38 32-32 32h-32L351.1 224zM280.2 1.131c-153.5-14.29-276.2 108.1-280.2 254.9l-.0206 15.92C-.0459 280.8 7.155 288 16 288c8.755 0 15.96-7.162 16-15.92l.0838-16.08C35.52 128.6 142.5 20.63 276.9 32.96c116.3 10.68 203.1 112.3 203.1 229.1v169.1c0 26.51-21.49 48-48 48h-83.01c4.081-10.88 4.609-23.54-2.282-36.69c-9.093-17.35-28.04-27.31-47.62-27.31L241.8 416c-23.21 0-44.49 15.69-48.87 38.49C187 485.2 210.4 512 239.1 512l191.1 .0001c44.19 0 80.01-35.82 80.01-79.1V262.9C512 129.6 412.9 13.49 280.2 1.131zM303.1 480H239.1c-8.876 0-16-7.125-16-16s7.126-16 16-16h64.01c8.876 0 16 7.125 16 16S312.9 480 303.1 480z\"><\/path><\/svg>","title":"Atendimento","title_size":"h4","text":"<p>Em dias úteis das 8h às 17h<\/p>"}},"guarantee_bY9GkQ":{"type":"guarantee","settings":{"icon":"stopwatch","icon_size":"small","custom_icon":"<svg xmlns=\"http:\/\/www.w3.org\/2000\/svg\" viewbox=\"0 0 576 512\"><path d=\"M96 368C96 359.2 103.2 352 112 352H176C184.8 352 192 359.2 192 368C192 376.8 184.8 384 176 384H112C103.2 384 96 376.8 96 368zM224 368C224 359.2 231.2 352 240 352H368C376.8 352 384 359.2 384 368C384 376.8 376.8 384 368 384H240C231.2 384 224 376.8 224 368zM0 96C0 60.65 28.65 32 64 32H512C547.3 32 576 60.65 576 96V416C576 451.3 547.3 480 512 480H64C28.65 480 0 451.3 0 416V96zM32 96V128H544V96C544 78.33 529.7 64 512 64H64C46.33 64 32 78.33 32 96zM32 224H544V160H32V224zM32 256V416C32 433.7 46.33 448 64 448H512C529.7 448 544 433.7 544 416V256H32z\"><\/path><\/svg>","title":"Parcelamento","title_size":"h4","text":"<p>Em até 10x sem juros<\/p>"}}},"block_order":["guarantee_RGWEVT","guarantee_qEjzVM","guarantee_FrCiHq","guarantee_bY9GkQ"],"settings":{"layout":"sidebar","column_alignment":"left","horizontal_content":true,"full_width":false,"show_divider":false,"columns_desktop":4,"heading":"","heading_size":"h1","heading_tag":"h2","columns_mobile":"1","swipe_on_mobile":true,"use_custom_colors":true,"colors_icon":"#ededee","colors_text":"#5f677a","colors_background":"#ffffff","gradient_background":"","padding_top":36,"padding_bottom":36}},"gallery_R9WgYA":{"type":"gallery","blocks":{"image_ryCMry":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Cama_02.jpg","image_position":"80% 50%","subheading":"","subheading_size":"h5","heading":"Cama","heading_size":"h2","link":"shopify:\/\/collections\/cama","text_box_position":"bottom-left"}},"image_kEAH37":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Mesa_02.jpg","image_position":"80% 50%","subheading":"","subheading_size":"h3","heading":"Mesa","heading_size":"h2","link":"shopify:\/\/collections\/mesa","text_box_position":"bottom-left"}},"image_et4HP3":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Banho_02.jpg","image_position":"20% 50%","subheading":"","subheading_size":"h3","heading":"Banho","heading_size":"h2","link":"shopify:\/\/collections\/banho","text_box_position":"bottom-left"}}},"block_order":["image_ryCMry","image_kEAH37","image_et4HP3"],"settings":{"per_row":3,"spacing_images":26,"image_height":360,"apply_overlay":true,"full_width":false,"show_divider":false,"heading":"","heading_size":"h2","heading_alignment":"left","heading_tag":"h2","columns_mobile":"1","swipe_on_mobile":true,"mobile_image_height":200,"padding_top":16,"padding_bottom":36}},"featured_collection_JnGDi3":{"type":"featured-collection","settings":{"collection":"karsten","products_to_show":4,"horizontal_scroll":false,"show_view_all":true,"show_divider":false,"heading":"Produtos Karsten","heading_size":"h2","heading_alignment":"left","heading_tag":"h2","columns_mobile":"2","swipe_on_mobile":false,"image_ratio":"square","image_position":"center center","enable_image_fill":true,"show_secondary_image":true,"secondary_image_max":1,"show_vendor":true,"show_rating":false,"show_quick_buy":true,"enable_quick_view":true,"enable_color_swatches":false,"enable_countdown":false,"padding_top":24,"padding_bottom":24}},"image_with_text_NnqfhB":{"type":"image-with-text","blocks":{"subheading_EQibyh":{"type":"subheading","settings":{"subheading":"GRUPO VIP MONTE SANTO","subheading_size":"h5","secondary_color":false}},"heading_zdcJm6":{"type":"heading","settings":{"heading":"Ofertas exclusivas no seu WhatsApp","heading_size":"h1","heading_tag":"h2"}},"text_Nft69z":{"type":"text","settings":{"text":"<p>Entre para o grupo e receba <strong>descontos especiais<\/strong>, <strong>lançamentos exclusivos<\/strong> e as melhores condições em cama, mesa e banho.<\/p>","text_size":"typeset2","secondary_color":false}},"button_YbiFd9":{"type":"button","settings":{"button_label":"QUERO ENTRAR AGORA","button_link":"https:\/\/chat.whatsapp.com\/jxua0oef0nm90p47pwh6yy","button_size":"medium","button_style_secondary":false}}},"block_order":["subheading_EQibyh","heading_zdcJm6","text_Nft69z","button_YbiFd9"],"name":"t:sections.image-with-text.presets.name","settings":{"image":"shopify:\/\/shop_images\/Grupo_vip_monte_santo.jpg","image_position":"center center","layout":"text_first","text_box_position":"middle","text_alignment":"left","image_ratio":"adapt","enlarge_content":false,"full_width":false,"show_divider":false,"image_behavior":"none","mobile_layout":"image_first","mobile_text_alignment":"left","mobile_image_ratio":"auto","enable_video_looping":false,"video_url":"","use_custom_colors":true,"colors_button_label":"#ffffff","colors_button_background":"#006ab3","colors_text":"#5f677a","colors_background":"#ffffff","gradient_background":"","padding_top":36,"padding_bottom":36}},"featured_collection_WgGVkk":{"type":"featured-collection","settings":{"collection":"buddemeyer","products_to_show":4,"horizontal_scroll":false,"show_view_all":true,"show_divider":false,"heading":"Produtos Buddemeyer","heading_size":"h2","heading_alignment":"left","heading_tag":"h2","columns_mobile":"2","swipe_on_mobile":false,"image_ratio":"square","image_position":"center center","enable_image_fill":true,"show_secondary_image":true,"secondary_image_max":1,"show_vendor":true,"show_rating":false,"show_quick_buy":true,"enable_quick_view":true,"enable_color_swatches":false,"enable_countdown":false,"padding_top":24,"padding_bottom":24}},"reveal_banner_7TyaaR":{"type":"reveal-banner","blocks":{"subheading_xrAtxn":{"type":"subheading","settings":{"subheading":"Lançamento","subheading_size":"h5","secondary_color":true}},"heading_T646Ae":{"type":"heading","settings":{"heading":"Coleção Flexia","heading_size":"h1","heading_tag":"h2"}},"subheading_d73Cqi":{"type":"subheading","settings":{"subheading":"Seu lar com a simplicidade e a sofisticação que você merece.","subheading_size":"h5","secondary_color":false}},"buttons_jHrKEJ":{"type":"buttons","settings":{"button_label":"Conferir coleção","button_link":"","video_button":"Assistir vídeo","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","video_description":"Descrição curta sobre o vídeo"}},"slide_xNjPab":{"type":"slide","settings":{"heading":"Flexia","heading_size":"h1","heading_tag":"h2","text":"<p>Descubra a coleção Flexia, onde a inovação encontra a praticidade. Inspirada por um estilo de vida moderno e dinâmico,<br\/>Flexia transforma qualquer espaço com seu design impressionante e funcionalidades inovadoras.<\/p>","text_size":"typeset","secondary_color":false,"button_label":"Saiba Mais","button_link":"","button_size":"medium","button_style_secondary":false,"colors_button_label":"#ffffff","colors_button_background":"#23a368","colors_text":"#ffffff","colors_background":"#5f677a","gradient_background":"linear-gradient(133deg, rgba(95, 103, 122, 1) 11%, rgba(105, 114, 135, 1) 87%)"}}},"block_order":["subheading_xrAtxn","heading_T646Ae","subheading_d73Cqi","buttons_jHrKEJ","slide_xNjPab"],"disabled":true,"settings":{"image_position":"center center","text_box_position":"bottom","text_alignment":"left","image_ratio":"650px","full_width":true,"show_divider":false,"mobile_text_alignment":"left","mobile_image_ratio":"auto","show_text_below":false,"colors_text":"#ffffff","colors_overlay":"#0b193d","colors_overlay_opacity":40,"padding_top":0,"padding_bottom":0}},"gallery_pFaYtc":{"type":"gallery","blocks":{"image_mhnaP8":{"type":"image","settings":{"image_position":"center center","subheading":"","subheading_size":"h5","heading":"Tapete Sala","heading_size":"h3","link":"shopify:\/\/collections\/tapetes-para-sala","text_box_position":"bottom-left"}},"image_i8aBQF":{"type":"image","settings":{"image_position":"center center","subheading":"","subheading_size":"h5","heading":"Tapete Cozinha","heading_size":"h3","link":"shopify:\/\/collections\/tapetes-para-cozinha","text_box_position":"bottom-left"}},"image_WdBcec":{"type":"image","settings":{"image_position":"center center","subheading":"","subheading_size":"h5","heading":"Tapete Quarto","heading_size":"h3","link":"shopify:\/\/collections\/tapetes-para-quarto","text_box_position":"bottom-left"}},"image_xTUNVd":{"type":"image","settings":{"image_position":"center center","subheading":"","subheading_size":"h5","heading":"Tapete Escritório","heading_size":"h3","link":"shopify:\/\/collections\/tapete-escritorio","text_box_position":"bottom-left"}},"image_i3qMEh":{"type":"image","settings":{"image_position":"center center","subheading":"","subheading_size":"h5","heading":"Tapete Banheiro","heading_size":"h3","link":"shopify:\/\/collections\/tapetes-para-banheiro","text_box_position":"bottom-left"}},"image_zJwygq":{"type":"image","settings":{"image_position":"center center","subheading":"","subheading_size":"h5","heading":"Tapete Quarto Infantil","heading_size":"h3","link":"shopify:\/\/collections\/tapete-quarto-infantil","text_box_position":"bottom-left"}},"image_WkVM9f":{"type":"image","settings":{"image_position":"center center","subheading":"","subheading_size":"h5","heading":"Tapete Sala de Jantar","heading_size":"h3","link":"shopify:\/\/collections\/tapete-sala-de-jantar","text_box_position":"bottom-left"}}},"block_order":["image_mhnaP8","image_i8aBQF","image_WdBcec","image_xTUNVd","image_i3qMEh","image_zJwygq","image_WkVM9f"],"disabled":true,"settings":{"per_row":4,"spacing_images":8,"image_height":240,"apply_overlay":true,"full_width":false,"show_divider":false,"heading":"Escolha por Ambiente","heading_size":"h1","heading_alignment":"left","heading_tag":"h2","columns_mobile":"1","swipe_on_mobile":true,"mobile_image_height":180,"padding_top":36,"padding_bottom":36}},"video_hero_afQbkU":{"type":"video-hero","blocks":{"heading_kwtgzz":{"type":"heading","settings":{"heading":"Hotelaria","heading_size":"h1","heading_tag":"h2"}},"text_LtUhKJ":{"type":"text","settings":{"text":"<p>Uma linha completa de produtos profissionais, com durabilidade incomparável.<\/p>","text_size":"typeset","secondary_color":false}},"button_iKBCcM":{"type":"button","settings":{"button_label":"Conferir","button_link":"shopify:\/\/collections\/profissional","button_size":"small","button_style_secondary":false}}},"block_order":["heading_kwtgzz","text_LtUhKJ","button_iKBCcM"],"name":"t:sections.video-hero.presets.name","settings":{"video":"shopify:\/\/files\/videos\/1789561_Bed_Bedspread_1920x1080.mp4","video_url":"https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc","text_box_position":"middle-left","text_alignment":"left","image_ratio":"400px","show_text_box":false,"full_width":false,"show_divider":false,"mobile_text_alignment":"left","mobile_image_ratio":"400px","show_text_below":false,"colors_button_label":"#ffffff","colors_button_background":"#006ab3","colors_text":"#ffffff","colors_overlay":"#000000","colors_overlay_opacity":12,"padding_top":36,"padding_bottom":8}},"gallery_VY398h":{"type":"gallery","blocks":{"image_jhxLg6":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Casa_e_decoracao3.jpg","image_position":"center center","subheading":"","subheading_size":"h5","heading":"Casa & Decoração","heading_size":"h2","link":"shopify:\/\/collections\/mesa","text_box_position":"bottom-left"}},"image_tnddLC":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Travesseiros.jpg","image_position":"20% 50%","subheading":"","subheading_size":"h5","heading":"Travesseiros","heading_size":"h2","link":"shopify:\/\/collections\/travesseiros","text_box_position":"bottom-left"}},"image_bqCRei":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Infantil3.jpg","image_position":"80% 50%","subheading":"","subheading_size":"h3","heading":"Infantil","heading_size":"h2","link":"shopify:\/\/collections\/infantil","text_box_position":"bottom-left"}}},"block_order":["image_jhxLg6","image_tnddLC","image_bqCRei"],"settings":{"per_row":3,"spacing_images":26,"image_height":360,"apply_overlay":true,"full_width":false,"show_divider":false,"heading":"","heading_size":"h2","heading_alignment":"left","heading_tag":"h2","columns_mobile":"1","swipe_on_mobile":true,"mobile_image_height":200,"padding_top":16,"padding_bottom":36}},"featured_collection_gXTtDA":{"type":"featured-collection","settings":{"collection":"monte-santo","products_to_show":4,"horizontal_scroll":false,"show_view_all":true,"show_divider":false,"heading":"Produtos Monte Santo","heading_size":"h2","heading_alignment":"left","heading_tag":"h2","columns_mobile":"2","swipe_on_mobile":false,"image_ratio":"square","image_position":"center center","enable_image_fill":true,"show_secondary_image":true,"secondary_image_max":1,"show_vendor":true,"show_rating":false,"show_quick_buy":true,"enable_quick_view":true,"enable_color_swatches":false,"enable_countdown":false,"padding_top":24,"padding_bottom":24}},"featured_collection_8Uw9WM":{"type":"featured-collection","settings":{"collection":"camesa","products_to_show":4,"horizontal_scroll":false,"show_view_all":true,"show_divider":false,"heading":"Produtos Camesa","heading_size":"h2","heading_alignment":"left","heading_tag":"h2","columns_mobile":"2","swipe_on_mobile":false,"image_ratio":"square","image_position":"center center","enable_image_fill":true,"show_secondary_image":true,"secondary_image_max":1,"show_vendor":true,"show_rating":false,"show_quick_buy":true,"enable_quick_view":true,"enable_color_swatches":false,"enable_countdown":false,"padding_top":24,"padding_bottom":24}},"scrolling_promotion_UzPh6y":{"type":"scrolling-promotion","blocks":{"image_rjhUde":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Buddemeyer.svg","height":44,"link":"shopify:\/\/collections\/buddemeyer"}},"image_zB7UHB":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Buettner_Logo_SVG.svg","height":28,"link":"shopify:\/\/collections\/buettner"}},"image_x9TBNH":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Camesa_Logo.png","height":36,"link":""}},"image_74nxrw":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Karsten_Logo_SVG.svg","height":32,"link":"shopify:\/\/collections\/karsten"}},"image_bgRNWW":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Teka_Logo.png","height":32,"link":"shopify:\/\/collections\/teka"}},"image_9fMa73":{"type":"image","settings":{"image":"shopify:\/\/shop_images\/Dohler_Logo.svg","height":32,"link":""}}},"block_order":["image_rjhUde","image_zB7UHB","image_x9TBNH","image_74nxrw","image_bgRNWW","image_9fMa73"],"settings":{"direction":"left","speed":1.6,"show_divider":false,"use_custom_colors":false,"colors_icon":"#ffffff","colors_text":"#1a1b18","colors_background":"#ffffff","gradient_background":"","padding_top":36,"padding_bottom":36}},"custom_liquid_iemGHJ":{"type":"custom-liquid","disabled":true,"settings":{"custom_liquid":"<section>\n    <div class=\"custom-container\">\n        <div class=\"custom-video-wrapper\" onclick=\"openCustomModal()\">\n            <video autoplay loop muted playsinline class=\"custom-background-video\">\n                <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ba56a9cfde4447e0a5ab011b81acfe26.mp4\" type=\"video\/mp4\">\n                Seu navegador não suporta vídeos HTML5.\n            <\/video>\n        <\/div>\n\n        <div class=\"custom-text-wrapper\">\n            <h3 class=\"h2\">A União Perfeita Entre Beleza e Conforto<\/h3>\n            <p>\n                Carol Barroso destaca a coleção Flexia, onde inovação e conforto se encontram. Tapetes resistentes, laváveis e cheios de personalidade para seu espaço.\n            <\/p>\n            <button class=\"button button--secondary\" onclick=\"openCustomModal()\">\n                <svg class=\"play-icon\" width=\"12px\" viewBox=\"0 0 13.02 14.52\" alt=\"Play Icon\">\n                    <path fill=\"currentColor\" d=\"M0,2C0,.46,1.67-.5,3.01.28l9.02,5.26c1.32.77,1.32,2.68,0,3.46L3.01,14.25c-1.33.78-3.01-.18-3.01-1.73V2ZM11.02,7.26L2,2v10.52l9.02-5.26Z\"\/>\n                  <\/svg>\n                <span>Assistir<\/span>\n            <\/button>\n        <\/div>\n    <\/div>\n<\/section>\n\n<div id=\"customVideoModal\" class=\"custom-modal\">\n    <div class=\"custom-modal-overlay\" onclick=\"closeCustomModal()\"><\/div>\n    <div class=\"custom-modal-content\">\n        <button class=\"custom-close\" onclick=\"closeCustomModal()\">×<\/button>\n        <video id=\"customFullVideo\" controls class=\"custom-full-video\">\n            <source src=\"https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/ba56a9cfde4447e0a5ab011b81acfe26.mp4\" type=\"video\/mp4\">\n            Seu navegador não suporta vídeos HTML5.\n        <\/video>\n    <\/div>\n<\/div>\n\n<style>\n.play-icon {\n    margin-right: 8px;\n}\n    .custom-container {\n        display: flex;\n        align-items: center;\n        max-width: 100%;\n        width: 100%;\n        gap: 80px;\n        justify-content: center;\n    }\n\n    .custom-text-wrapper .h2 {\n        max-width: 420px;\n    }\n\n    .custom-video-wrapper {\n        flex: 1;\n        max-width: 60%;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        cursor: pointer;\n    }\n\n    .custom-background-video {\n        width: 100%;\n        height: auto;\n        border-radius: 12px;\n    }\n\n    .custom-text-wrapper {\n        flex: 1;\n        max-width: 40%;\n        text-align: left;\n    }\n\n    .custom-text-wrapper p {\n        font-size: 16px;\n        color: #5f677a;\n        margin-bottom: 32px;\n        line-height: 2.4rem;\n        max-width: 480px;\n    }\n\n    .custom-modal {\n        display: flex;\n        position: fixed;\n        inset: 0;\n        background-color: rgba(0, 0, 0, 0.6);\n        align-items: center;\n        justify-content: center;\n        opacity: 0;\n        visibility: hidden;\n        transform: scale(1);\n        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;\n        z-index: 1000;\n    }\n\n    .custom-modal.show {\n        opacity: 1;\n        visibility: visible;\n    }\n\n    .custom-modal-overlay {\n        position: absolute;\n        inset: 0;\n        background: transparent;\n        cursor: pointer;\n    }\n\n    .custom-modal-content {\n        position: relative;\n        width: 90%;\n        max-width: 720px;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        z-index: 1001;\n        transform: scale(1);\n    }\n\n    .custom-full-video {\n        width: 100%;\n        height: auto;\n        max-height: 85vh;\n        border-radius: 12px;\n        background: black;\n    }\n\n    .custom-close {\n        position: absolute;\n        top: -12px;\n        right: -12px;\n        width: 36px;\n        height: 36px;\n        font-size: 24px;\n        color: white;\n        cursor: pointer;\n        z-index: 1002;\n        background: rgba(0, 0, 0, 0.6);\n        border: none;\n        border-radius: 50%;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        transition: background 0.3s;\n    }\n\n    .custom-close:hover {\n        background: rgba(255, 255, 255, 0.3);\n    }\n\n    @media (max-width: 768px) {\n        .custom-container {\n            flex-direction: column;\n            text-align: center;\n            gap: 16px;\n        }\n\n        .custom-text-wrapper {\n            max-width: 100%;\n            text-align: center;\n        }\n\n        .custom-video-wrapper {\n            max-width: 100%;\n        }\n\n        .custom-modal-content {\n            width: 95%;\n        }\n\n        .custom-button {\n            width: 100%;\n            max-width: 280px;\n            margin: 0 auto;\n        }\n    }\n<\/style>\n\n<script>\n    function openCustomModal() {\n        let modal = document.getElementById(\"customVideoModal\");\n        let video = document.getElementById(\"customFullVideo\");\n\n        modal.style.visibility = \"visible\"; \n        modal.classList.add(\"show\");\n\n        video.currentTime = 0; \n        video.play();\n    }\n\n    function closeCustomModal() {\n        let modal = document.getElementById(\"customVideoModal\");\n        let video = document.getElementById(\"customFullVideo\");\n\n        modal.classList.remove(\"show\");\n\n        setTimeout(() => {\n            modal.style.visibility = \"hidden\"; \n        }, 300);\n        \n        video.pause();\n        video.currentTime = 0;\n    }\n\n    document.getElementById(\"customVideoModal\").addEventListener(\"click\", function(event) {\n        let modalContent = document.querySelector(\".custom-modal-content\");\n        if (!modalContent.contains(event.target)) {\n            closeCustomModal();\n        }\n    });\n<\/script>","full_width":false,"show_divider":false,"padding_top":56,"padding_bottom":56}},"images_with_text_AN46tC":{"type":"images-with-text","blocks":{"subheading_Wd6C7A":{"type":"subheading","settings":{"subheading":"Enxovais Monte Santo","subheading_size":"h5","secondary_color":true}},"heading_P7zQtD":{"type":"heading","settings":{"heading":"Mais de 40 anos de história","heading_size":"h1","heading_tag":"h2"}},"text_JTd7dj":{"type":"text","settings":{"text":"<p>Com oito filiais e 48 anos de tradição, a Enxovais Monte Santo é referência em Cama, Mesa e Banho, entregando conforto, qualidade e um atendimento sempre personalizado.<\/p>","text_size":"typeset","secondary_color":false}},"button_h3mR9e":{"type":"button","settings":{"button_label":"Saiba Mais","button_link":"","button_size":"small","button_style_secondary":false}}},"block_order":["subheading_Wd6C7A","heading_P7zQtD","text_JTd7dj","button_h3mR9e"],"settings":{"image":"shopify:\/\/shop_images\/Monte_Santo.jpg","image_2":"shopify:\/\/shop_images\/Monte_Santo_02.jpg","image_3":"shopify:\/\/shop_images\/3a556f51-6212-4a9b-9ba1-0fe92b8f02a3.jpg","image_4":"shopify:\/\/shop_images\/Monte_Santo_04.jpg","image_ratio":"adapt","image_position":"center center","layout":"text_first","text_box_position":"middle","text_alignment":"left","mobile_text_alignment":"left","full_width":false,"show_divider":false,"padding_top":36,"padding_bottom":36}},"store_locator_eikWbE":{"type":"store-locator","blocks":{"location_wLk3pH":{"type":"location","settings":{"title":"Loja 01","address":"Rua pEru, 200","button_label":"","button_link":""}},"location_PJdWMb":{"type":"location","disabled":true,"settings":{"title":"","address":"","button_label":"","button_link":""}}},"block_order":["location_wLk3pH","location_PJdWMb"],"disabled":true,"settings":{"map_api_key":"","map_zoom":5,"image_ratio":"600px","full_width":false,"show_divider":false,"mobile_image_ratio":"100vh","colors_overlay":"#ffffff","colors_text":"#212121","colors_button_label":"#1967d2","colors_border":"#e0e0e0","padding_top":36,"padding_bottom":36}}},"order":["slideshow_ecBq7T","guarantees_tEga33","gallery_R9WgYA","featured_collection_JnGDi3","image_with_text_NnqfhB","featured_collection_WgGVkk","reveal_banner_7TyaaR","gallery_pFaYtc","video_hero_afQbkU","gallery_VY398h","featured_collection_gXTtDA","featured_collection_8Uw9WM","scrolling_promotion_UzPh6y","custom_liquid_iemGHJ","images_with_text_AN46tC","store_locator_eikWbE"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "slideshow_ecBq7T": {
+      "type": "slideshow",
+      "blocks": {
+        "image_wRRpRg": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banner_Teste_01_04.jpg",
+            "image_position": "20% 50%",
+            "text_box_position": "middle-left",
+            "subheading": "Linha Completa",
+            "subheading_size": "h5",
+            "heading": "Para sua cama",
+            "heading_size": "h0",
+            "heading_tag": "h2",
+            "text": "Jogos de cama, colchas, lençóis, cobertores e muito mais!",
+            "text_size": "typeset",
+            "button_label": "Conferir",
+            "button_link": "shopify://collections/cama",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        },
+        "image_YgpNdB": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "image_position": "20% 100%",
+            "text_box_position": "middle-right",
+            "subheading": "Confira as nossas",
+            "subheading_size": "h5",
+            "heading": "Ofertas de Inverno",
+            "heading_size": "h0",
+            "heading_tag": "h2",
+            "text": "Edredons, lençóis, toalhas de banho e muito mais!",
+            "text_size": "typeset",
+            "button_label": "Conferir",
+            "button_link": "shopify://collections/inverno",
+            "button_size": "small",
+            "button_style_secondary": true
+          }
+        }
+      },
+      "block_order": [
+        "image_wRRpRg",
+        "image_YgpNdB"
+      ],
+      "settings": {
+        "slideshow_type": "legacy",
+        "text_alignment": "center",
+        "image_ratio": "650px",
+        "autorotate": true,
+        "autorotate_speed": 7,
+        "full_width": true,
+        "image_behavior": "none",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "500px",
+        "show_text_below": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#006ab3",
+        "colors_text": "#ffffff",
+        "colors_background": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 0,
+        "colors_navigation_text": "#ffffff",
+        "colors_navigation_background": "#ffffff",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "guarantees_tEga33": {
+      "type": "guarantees",
+      "blocks": {
+        "guarantee_RGWEVT": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "truck",
+            "icon_size": "small",
+            "custom_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 640 512\"><path d=\"M64 416C28.65 416 0 387.3 0 352V64C0 28.65 28.65 0 64 0H352C387.3 0 416 28.65 416 64V96H481.3C495.3 96 508.6 102.1 517.7 112.8L596.4 204.6C603.9 213.3 608 224.4 608 235.8V384H624C632.8 384 640 391.2 640 400C640 408.8 632.8 416 624 416H576C576 469 533 512 480 512C426.1 512 384 469 384 416H255.1C255.1 469 213 512 159.1 512C106.1 512 63.1 469 63.1 416H64zM32 64V352C32 369.7 46.33 384 64 384H69.46C82.64 346.7 118.2 320 160 320C201.8 320 237.4 346.7 250.5 384H384V64C384 46.33 369.7 32 352 32H64C46.33 32 32 46.33 32 64zM570.9 224L493.4 133.6C490.4 130 485.1 128 481.3 128H416V224H570.9zM416 256V344.4C432.1 329.2 455.4 320 480 320C521.8 320 557.4 346.7 570.5 384H576V256H416zM160 352C124.7 352 96 380.7 96 416C96 451.3 124.7 480 160 480C195.3 480 224 451.3 224 416C224 380.7 195.3 352 160 352zM480 480C515.3 480 544 451.3 544 416C544 380.7 515.3 352 480 352C444.7 352 416 380.7 416 416C416 451.3 444.7 480 480 480z\"></path></svg>",
+            "title": "Frete Grátis",
+            "title_size": "h4",
+            "text": "<p><a href=\"/pages/como-comprar#frete-gratis\" title=\"/pages/como-comprar#frete-gratis\">Confira aqui as condições</a></p>"
+          }
+        },
+        "guarantee_qEjzVM": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "map_pin",
+            "icon_size": "small",
+            "custom_icon": "",
+            "title": "Onde Comprar",
+            "title_size": "h4",
+            "text": "<p><a href=\"/pages/loja-mais-proxima\" title=\"Loja mais próxima\">Consulte nossas lojas</a></p>"
+          }
+        },
+        "guarantee_FrCiHq": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "stopwatch",
+            "icon_size": "small",
+            "custom_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\"><path d=\"M191.1 224c0-17.62-14.37-32.04-32-32.04l-32.01 0c-35.38 0-64 28.62-64 63.1L63.96 319.6c0 35.38 28.63 64 64.01 64h32c17.63 0 32-14.38 32-32L191.1 224zM159.1 351.6h-32c-17.63 0-32-14.38-32-32V256c0-17.62 14.38-32 32-32l32.02-.0001L159.1 351.6zM383.1 383.6c35.38 0 64.01-28.62 64.01-64l.0026-63.63c0-35.38-28.62-63.1-64-63.1l-31.1 0c-17.63 0-32 14.42-32 32.04l-.0105 127.6c0 17.62 14.38 32 32 32H383.1zM351.1 224l31.1 .0001c17.63 0 32 14.38 32 32V319.6c0 17.62-14.38 32-32 32h-32L351.1 224zM280.2 1.131c-153.5-14.29-276.2 108.1-280.2 254.9l-.0206 15.92C-.0459 280.8 7.155 288 16 288c8.755 0 15.96-7.162 16-15.92l.0838-16.08C35.52 128.6 142.5 20.63 276.9 32.96c116.3 10.68 203.1 112.3 203.1 229.1v169.1c0 26.51-21.49 48-48 48h-83.01c4.081-10.88 4.609-23.54-2.282-36.69c-9.093-17.35-28.04-27.31-47.62-27.31L241.8 416c-23.21 0-44.49 15.69-48.87 38.49C187 485.2 210.4 512 239.1 512l191.1 .0001c44.19 0 80.01-35.82 80.01-79.1V262.9C512 129.6 412.9 13.49 280.2 1.131zM303.1 480H239.1c-8.876 0-16-7.125-16-16s7.126-16 16-16h64.01c8.876 0 16 7.125 16 16S312.9 480 303.1 480z\"></path></svg>",
+            "title": "Atendimento",
+            "title_size": "h4",
+            "text": "<p>Em dias úteis das 8h às 17h</p>"
+          }
+        },
+        "guarantee_bY9GkQ": {
+          "type": "guarantee",
+          "settings": {
+            "icon": "stopwatch",
+            "icon_size": "small",
+            "custom_icon": "<svg xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 576 512\"><path d=\"M96 368C96 359.2 103.2 352 112 352H176C184.8 352 192 359.2 192 368C192 376.8 184.8 384 176 384H112C103.2 384 96 376.8 96 368zM224 368C224 359.2 231.2 352 240 352H368C376.8 352 384 359.2 384 368C384 376.8 376.8 384 368 384H240C231.2 384 224 376.8 224 368zM0 96C0 60.65 28.65 32 64 32H512C547.3 32 576 60.65 576 96V416C576 451.3 547.3 480 512 480H64C28.65 480 0 451.3 0 416V96zM32 96V128H544V96C544 78.33 529.7 64 512 64H64C46.33 64 32 78.33 32 96zM32 224H544V160H32V224zM32 256V416C32 433.7 46.33 448 64 448H512C529.7 448 544 433.7 544 416V256H32z\"></path></svg>",
+            "title": "Parcelamento",
+            "title_size": "h4",
+            "text": "<p>Em até 10x sem juros</p>"
+          }
+        }
+      },
+      "block_order": [
+        "guarantee_RGWEVT",
+        "guarantee_qEjzVM",
+        "guarantee_FrCiHq",
+        "guarantee_bY9GkQ"
+      ],
+      "settings": {
+        "layout": "sidebar",
+        "column_alignment": "left",
+        "horizontal_content": true,
+        "full_width": false,
+        "show_divider": false,
+        "columns_desktop": 4,
+        "heading": "",
+        "heading_size": "h1",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "use_custom_colors": true,
+        "colors_icon": "#ededee",
+        "colors_text": "#5f677a",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "gallery_R9WgYA": {
+      "type": "gallery",
+      "blocks": {
+        "image_ryCMry": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Cama_02.jpg",
+            "image_position": "80% 50%",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "Cama",
+            "heading_size": "h2",
+            "link": "shopify://collections/cama",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_kEAH37": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Mesa_02.jpg",
+            "image_position": "80% 50%",
+            "subheading": "",
+            "subheading_size": "h3",
+            "heading": "Mesa",
+            "heading_size": "h2",
+            "link": "shopify://collections/mesa",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_et4HP3": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Banho_02.jpg",
+            "image_position": "20% 50%",
+            "subheading": "",
+            "subheading_size": "h3",
+            "heading": "Banho",
+            "heading_size": "h2",
+            "link": "shopify://collections/banho",
+            "text_box_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_ryCMry",
+        "image_kEAH37",
+        "image_et4HP3"
+      ],
+      "settings": {
+        "per_row": 3,
+        "spacing_images": 26,
+        "image_height": 360,
+        "apply_overlay": true,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "mobile_image_height": 200,
+        "padding_top": 16,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_JnGDi3": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "karsten",
+        "products_to_show": 4,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "Produtos Karsten",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "secondary_image_max": 1,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": false,
+        "enable_countdown": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "image_with_text_NnqfhB": {
+      "type": "image-with-text",
+      "blocks": {
+        "subheading_EQibyh": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "GRUPO VIP MONTE SANTO",
+            "subheading_size": "h5",
+            "secondary_color": false
+          }
+        },
+        "heading_zdcJm6": {
+          "type": "heading",
+          "settings": {
+            "heading": "Ofertas exclusivas no seu WhatsApp",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_Nft69z": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Entre para o grupo e receba <strong>descontos especiais</strong>, <strong>lançamentos exclusivos</strong> e as melhores condições em cama, mesa e banho.</p>",
+            "text_size": "typeset2",
+            "secondary_color": false
+          }
+        },
+        "button_YbiFd9": {
+          "type": "button",
+          "settings": {
+            "button_label": "QUERO ENTRAR AGORA",
+            "button_link": "https://chat.whatsapp.com/jxua0oef0nm90p47pwh6yy",
+            "button_size": "medium",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_EQibyh",
+        "heading_zdcJm6",
+        "text_Nft69z",
+        "button_YbiFd9"
+      ],
+      "name": "t:sections.image-with-text.presets.name",
+      "settings": {
+        "image": "shopify://shop_images/Grupo_vip_monte_santo.jpg",
+        "image_position": "center center",
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "image_ratio": "adapt",
+        "enlarge_content": false,
+        "full_width": false,
+        "show_divider": false,
+        "image_behavior": "none",
+        "mobile_layout": "image_first",
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "enable_video_looping": false,
+        "video_url": "",
+        "use_custom_colors": true,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#006ab3",
+        "colors_text": "#5f677a",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_WgGVkk": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "buddemeyer",
+        "products_to_show": 4,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "Produtos Buddemeyer",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "secondary_image_max": 1,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": false,
+        "enable_countdown": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "reveal_banner_7TyaaR": {
+      "type": "reveal-banner",
+      "blocks": {
+        "subheading_xrAtxn": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Lançamento",
+            "subheading_size": "h5",
+            "secondary_color": true
+          }
+        },
+        "heading_T646Ae": {
+          "type": "heading",
+          "settings": {
+            "heading": "Coleção Flexia",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "subheading_d73Cqi": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Seu lar com a simplicidade e a sofisticação que você merece.",
+            "subheading_size": "h5",
+            "secondary_color": false
+          }
+        },
+        "buttons_jHrKEJ": {
+          "type": "buttons",
+          "settings": {
+            "button_label": "Conferir coleção",
+            "button_link": "",
+            "video_button": "Assistir vídeo",
+            "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+            "video_description": "Descrição curta sobre o vídeo"
+          }
+        },
+        "slide_xNjPab": {
+          "type": "slide",
+          "settings": {
+            "heading": "Flexia",
+            "heading_size": "h1",
+            "heading_tag": "h2",
+            "text": "<p>Descubra a coleção Flexia, onde a inovação encontra a praticidade. Inspirada por um estilo de vida moderno e dinâmico,<br/>Flexia transforma qualquer espaço com seu design impressionante e funcionalidades inovadoras.</p>",
+            "text_size": "typeset",
+            "secondary_color": false,
+            "button_label": "Saiba Mais",
+            "button_link": "",
+            "button_size": "medium",
+            "button_style_secondary": false,
+            "colors_button_label": "#ffffff",
+            "colors_button_background": "#23a368",
+            "colors_text": "#ffffff",
+            "colors_background": "#5f677a",
+            "gradient_background": "linear-gradient(133deg, rgba(95, 103, 122, 1) 11%, rgba(105, 114, 135, 1) 87%)"
+          }
+        }
+      },
+      "block_order": [
+        "subheading_xrAtxn",
+        "heading_T646Ae",
+        "subheading_d73Cqi",
+        "buttons_jHrKEJ",
+        "slide_xNjPab"
+      ],
+      "disabled": true,
+      "settings": {
+        "image_position": "center center",
+        "text_box_position": "bottom",
+        "text_alignment": "left",
+        "image_ratio": "650px",
+        "full_width": true,
+        "show_divider": false,
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "auto",
+        "show_text_below": false,
+        "colors_text": "#ffffff",
+        "colors_overlay": "#0b193d",
+        "colors_overlay_opacity": 40,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "gallery_pFaYtc": {
+      "type": "gallery",
+      "blocks": {
+        "image_mhnaP8": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "Tapete Sala",
+            "heading_size": "h3",
+            "link": "shopify://collections/tapetes-para-sala",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_i8aBQF": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "Tapete Cozinha",
+            "heading_size": "h3",
+            "link": "shopify://collections/tapetes-para-cozinha",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_WdBcec": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "Tapete Quarto",
+            "heading_size": "h3",
+            "link": "shopify://collections/tapetes-para-quarto",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_xTUNVd": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "Tapete Escritório",
+            "heading_size": "h3",
+            "link": "shopify://collections/tapete-escritorio",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_i3qMEh": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "Tapete Banheiro",
+            "heading_size": "h3",
+            "link": "shopify://collections/tapetes-para-banheiro",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_zJwygq": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "Tapete Quarto Infantil",
+            "heading_size": "h3",
+            "link": "shopify://collections/tapete-quarto-infantil",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_WkVM9f": {
+          "type": "image",
+          "settings": {
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "Tapete Sala de Jantar",
+            "heading_size": "h3",
+            "link": "shopify://collections/tapete-sala-de-jantar",
+            "text_box_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_mhnaP8",
+        "image_i8aBQF",
+        "image_WdBcec",
+        "image_xTUNVd",
+        "image_i3qMEh",
+        "image_zJwygq",
+        "image_WkVM9f"
+      ],
+      "disabled": true,
+      "settings": {
+        "per_row": 4,
+        "spacing_images": 8,
+        "image_height": 240,
+        "apply_overlay": true,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "Escolha por Ambiente",
+        "heading_size": "h1",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "mobile_image_height": 180,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "video_hero_afQbkU": {
+      "type": "video-hero",
+      "blocks": {
+        "heading_kwtgzz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Hotelaria",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_LtUhKJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Uma linha completa de produtos profissionais, com durabilidade incomparável.</p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "button_iKBCcM": {
+          "type": "button",
+          "settings": {
+            "button_label": "Conferir",
+            "button_link": "shopify://collections/profissional",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_kwtgzz",
+        "text_LtUhKJ",
+        "button_iKBCcM"
+      ],
+      "name": "t:sections.video-hero.presets.name",
+      "settings": {
+        "video": "shopify://files/videos/1789561_Bed_Bedspread_1920x1080.mp4",
+        "video_url": "https://www.youtube.com/watch?v=_9VUPq3SxOc",
+        "text_box_position": "middle-left",
+        "text_alignment": "left",
+        "image_ratio": "400px",
+        "show_text_box": false,
+        "full_width": false,
+        "show_divider": false,
+        "mobile_text_alignment": "left",
+        "mobile_image_ratio": "400px",
+        "show_text_below": false,
+        "colors_button_label": "#ffffff",
+        "colors_button_background": "#006ab3",
+        "colors_text": "#ffffff",
+        "colors_overlay": "#000000",
+        "colors_overlay_opacity": 12,
+        "padding_top": 36,
+        "padding_bottom": 8
+      }
+    },
+    "gallery_VY398h": {
+      "type": "gallery",
+      "blocks": {
+        "image_jhxLg6": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Casa_e_decoracao3.jpg",
+            "image_position": "center center",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "Casa & Decoração",
+            "heading_size": "h2",
+            "link": "shopify://collections/mesa",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_tnddLC": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Travesseiros.jpg",
+            "image_position": "20% 50%",
+            "subheading": "",
+            "subheading_size": "h5",
+            "heading": "Travesseiros",
+            "heading_size": "h2",
+            "link": "shopify://collections/travesseiros",
+            "text_box_position": "bottom-left"
+          }
+        },
+        "image_bqCRei": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Infantil3.jpg",
+            "image_position": "80% 50%",
+            "subheading": "",
+            "subheading_size": "h3",
+            "heading": "Infantil",
+            "heading_size": "h2",
+            "link": "shopify://collections/infantil",
+            "text_box_position": "bottom-left"
+          }
+        }
+      },
+      "block_order": [
+        "image_jhxLg6",
+        "image_tnddLC",
+        "image_bqCRei"
+      ],
+      "settings": {
+        "per_row": 3,
+        "spacing_images": 26,
+        "image_height": 360,
+        "apply_overlay": true,
+        "full_width": false,
+        "show_divider": false,
+        "heading": "",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "mobile_image_height": 200,
+        "padding_top": 16,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection_gXTtDA": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "cama-monte-santo",
+        "products_to_show": 4,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "Produtos Monte Santo",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "secondary_image_max": 1,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": false,
+        "enable_countdown": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "featured_collection_8Uw9WM": {
+      "type": "featured-collection",
+      "settings": {
+        "collection": "camesa",
+        "products_to_show": 4,
+        "horizontal_scroll": false,
+        "show_view_all": true,
+        "show_divider": false,
+        "heading": "Produtos Camesa",
+        "heading_size": "h2",
+        "heading_alignment": "left",
+        "heading_tag": "h2",
+        "columns_mobile": "2",
+        "swipe_on_mobile": false,
+        "image_ratio": "square",
+        "image_position": "center center",
+        "enable_image_fill": true,
+        "show_secondary_image": true,
+        "secondary_image_max": 1,
+        "show_vendor": true,
+        "show_rating": false,
+        "show_quick_buy": true,
+        "enable_quick_view": true,
+        "enable_color_swatches": false,
+        "enable_countdown": false,
+        "padding_top": 24,
+        "padding_bottom": 24
+      }
+    },
+    "scrolling_promotion_UzPh6y": {
+      "type": "scrolling-promotion",
+      "blocks": {
+        "image_rjhUde": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Buddemeyer.svg",
+            "height": 44,
+            "link": "shopify://collections/buddemeyer"
+          }
+        },
+        "image_zB7UHB": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Buettner_Logo_SVG.svg",
+            "height": 28,
+            "link": "shopify://collections/buettner"
+          }
+        },
+        "image_x9TBNH": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Camesa_Logo.png",
+            "height": 36,
+            "link": ""
+          }
+        },
+        "image_74nxrw": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Karsten_Logo_SVG.svg",
+            "height": 32,
+            "link": "shopify://collections/karsten"
+          }
+        },
+        "image_bgRNWW": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Teka_Logo.png",
+            "height": 32,
+            "link": "shopify://collections/teka"
+          }
+        },
+        "image_9fMa73": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Dohler_Logo.svg",
+            "height": 32,
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_rjhUde",
+        "image_zB7UHB",
+        "image_x9TBNH",
+        "image_74nxrw",
+        "image_bgRNWW",
+        "image_9fMa73"
+      ],
+      "settings": {
+        "direction": "left",
+        "speed": 1.6,
+        "show_divider": false,
+        "use_custom_colors": false,
+        "colors_icon": "#ffffff",
+        "colors_text": "#1a1b18",
+        "colors_background": "#ffffff",
+        "gradient_background": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "custom_liquid_iemGHJ": {
+      "type": "custom-liquid",
+      "disabled": true,
+      "settings": {
+        "custom_liquid": "<section>\n    <div class=\"custom-container\">\n        <div class=\"custom-video-wrapper\" onclick=\"openCustomModal()\">\n            <video autoplay loop muted playsinline class=\"custom-background-video\">\n                <source src=\"https://cdn.shopify.com/videos/c/o/v/ba56a9cfde4447e0a5ab011b81acfe26.mp4\" type=\"video/mp4\">\n                Seu navegador não suporta vídeos HTML5.\n            </video>\n        </div>\n\n        <div class=\"custom-text-wrapper\">\n            <h3 class=\"h2\">A União Perfeita Entre Beleza e Conforto</h3>\n            <p>\n                Carol Barroso destaca a coleção Flexia, onde inovação e conforto se encontram. Tapetes resistentes, laváveis e cheios de personalidade para seu espaço.\n            </p>\n            <button class=\"button button--secondary\" onclick=\"openCustomModal()\">\n                <svg class=\"play-icon\" width=\"12px\" viewBox=\"0 0 13.02 14.52\" alt=\"Play Icon\">\n                    <path fill=\"currentColor\" d=\"M0,2C0,.46,1.67-.5,3.01.28l9.02,5.26c1.32.77,1.32,2.68,0,3.46L3.01,14.25c-1.33.78-3.01-.18-3.01-1.73V2ZM11.02,7.26L2,2v10.52l9.02-5.26Z\"/>\n                  </svg>\n                <span>Assistir</span>\n            </button>\n        </div>\n    </div>\n</section>\n\n<div id=\"customVideoModal\" class=\"custom-modal\">\n    <div class=\"custom-modal-overlay\" onclick=\"closeCustomModal()\"></div>\n    <div class=\"custom-modal-content\">\n        <button class=\"custom-close\" onclick=\"closeCustomModal()\">×</button>\n        <video id=\"customFullVideo\" controls class=\"custom-full-video\">\n            <source src=\"https://cdn.shopify.com/videos/c/o/v/ba56a9cfde4447e0a5ab011b81acfe26.mp4\" type=\"video/mp4\">\n            Seu navegador não suporta vídeos HTML5.\n        </video>\n    </div>\n</div>\n\n<style>\n.play-icon {\n    margin-right: 8px;\n}\n    .custom-container {\n        display: flex;\n        align-items: center;\n        max-width: 100%;\n        width: 100%;\n        gap: 80px;\n        justify-content: center;\n    }\n\n    .custom-text-wrapper .h2 {\n        max-width: 420px;\n    }\n\n    .custom-video-wrapper {\n        flex: 1;\n        max-width: 60%;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        cursor: pointer;\n    }\n\n    .custom-background-video {\n        width: 100%;\n        height: auto;\n        border-radius: 12px;\n    }\n\n    .custom-text-wrapper {\n        flex: 1;\n        max-width: 40%;\n        text-align: left;\n    }\n\n    .custom-text-wrapper p {\n        font-size: 16px;\n        color: #5f677a;\n        margin-bottom: 32px;\n        line-height: 2.4rem;\n        max-width: 480px;\n    }\n\n    .custom-modal {\n        display: flex;\n        position: fixed;\n        inset: 0;\n        background-color: rgba(0, 0, 0, 0.6);\n        align-items: center;\n        justify-content: center;\n        opacity: 0;\n        visibility: hidden;\n        transform: scale(1);\n        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;\n        z-index: 1000;\n    }\n\n    .custom-modal.show {\n        opacity: 1;\n        visibility: visible;\n    }\n\n    .custom-modal-overlay {\n        position: absolute;\n        inset: 0;\n        background: transparent;\n        cursor: pointer;\n    }\n\n    .custom-modal-content {\n        position: relative;\n        width: 90%;\n        max-width: 720px;\n        display: flex;\n        justify-content: center;\n        align-items: center;\n        z-index: 1001;\n        transform: scale(1);\n    }\n\n    .custom-full-video {\n        width: 100%;\n        height: auto;\n        max-height: 85vh;\n        border-radius: 12px;\n        background: black;\n    }\n\n    .custom-close {\n        position: absolute;\n        top: -12px;\n        right: -12px;\n        width: 36px;\n        height: 36px;\n        font-size: 24px;\n        color: white;\n        cursor: pointer;\n        z-index: 1002;\n        background: rgba(0, 0, 0, 0.6);\n        border: none;\n        border-radius: 50%;\n        display: flex;\n        align-items: center;\n        justify-content: center;\n        transition: background 0.3s;\n    }\n\n    .custom-close:hover {\n        background: rgba(255, 255, 255, 0.3);\n    }\n\n    @media (max-width: 768px) {\n        .custom-container {\n            flex-direction: column;\n            text-align: center;\n            gap: 16px;\n        }\n\n        .custom-text-wrapper {\n            max-width: 100%;\n            text-align: center;\n        }\n\n        .custom-video-wrapper {\n            max-width: 100%;\n        }\n\n        .custom-modal-content {\n            width: 95%;\n        }\n\n        .custom-button {\n            width: 100%;\n            max-width: 280px;\n            margin: 0 auto;\n        }\n    }\n</style>\n\n<script>\n    function openCustomModal() {\n        let modal = document.getElementById(\"customVideoModal\");\n        let video = document.getElementById(\"customFullVideo\");\n\n        modal.style.visibility = \"visible\"; \n        modal.classList.add(\"show\");\n\n        video.currentTime = 0; \n        video.play();\n    }\n\n    function closeCustomModal() {\n        let modal = document.getElementById(\"customVideoModal\");\n        let video = document.getElementById(\"customFullVideo\");\n\n        modal.classList.remove(\"show\");\n\n        setTimeout(() => {\n            modal.style.visibility = \"hidden\"; \n        }, 300);\n        \n        video.pause();\n        video.currentTime = 0;\n    }\n\n    document.getElementById(\"customVideoModal\").addEventListener(\"click\", function(event) {\n        let modalContent = document.querySelector(\".custom-modal-content\");\n        if (!modalContent.contains(event.target)) {\n            closeCustomModal();\n        }\n    });\n</script>",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 56,
+        "padding_bottom": 56
+      }
+    },
+    "images_with_text_AN46tC": {
+      "type": "images-with-text",
+      "blocks": {
+        "subheading_Wd6C7A": {
+          "type": "subheading",
+          "settings": {
+            "subheading": "Enxovais Monte Santo",
+            "subheading_size": "h5",
+            "secondary_color": true
+          }
+        },
+        "heading_P7zQtD": {
+          "type": "heading",
+          "settings": {
+            "heading": "Mais de 40 anos de história",
+            "heading_size": "h1",
+            "heading_tag": "h2"
+          }
+        },
+        "text_JTd7dj": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Com oito filiais e 48 anos de tradição, a Enxovais Monte Santo é referência em Cama, Mesa e Banho, entregando conforto, qualidade e um atendimento sempre personalizado.</p>",
+            "text_size": "typeset",
+            "secondary_color": false
+          }
+        },
+        "button_h3mR9e": {
+          "type": "button",
+          "settings": {
+            "button_label": "Saiba Mais",
+            "button_link": "",
+            "button_size": "small",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "subheading_Wd6C7A",
+        "heading_P7zQtD",
+        "text_JTd7dj",
+        "button_h3mR9e"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Monte_Santo.jpg",
+        "image_2": "shopify://shop_images/Monte_Santo_02.jpg",
+        "image_3": "shopify://shop_images/3a556f51-6212-4a9b-9ba1-0fe92b8f02a3.jpg",
+        "image_4": "shopify://shop_images/Monte_Santo_04.jpg",
+        "image_ratio": "adapt",
+        "image_position": "center center",
+        "layout": "text_first",
+        "text_box_position": "middle",
+        "text_alignment": "left",
+        "mobile_text_alignment": "left",
+        "full_width": false,
+        "show_divider": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "store_locator_eikWbE": {
+      "type": "store-locator",
+      "blocks": {
+        "location_wLk3pH": {
+          "type": "location",
+          "settings": {
+            "title": "Loja 01",
+            "address": "Rua pEru, 200",
+            "button_label": "",
+            "button_link": ""
+          }
+        },
+        "location_PJdWMb": {
+          "type": "location",
+          "disabled": true,
+          "settings": {
+            "title": "",
+            "address": "",
+            "button_label": "",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "location_wLk3pH",
+        "location_PJdWMb"
+      ],
+      "disabled": true,
+      "settings": {
+        "map_api_key": "",
+        "map_zoom": 5,
+        "image_ratio": "600px",
+        "full_width": false,
+        "show_divider": false,
+        "mobile_image_ratio": "100vh",
+        "colors_overlay": "#ffffff",
+        "colors_text": "#212121",
+        "colors_button_label": "#1967d2",
+        "colors_border": "#e0e0e0",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "slideshow_ecBq7T",
+    "guarantees_tEga33",
+    "gallery_R9WgYA",
+    "featured_collection_JnGDi3",
+    "image_with_text_NnqfhB",
+    "featured_collection_WgGVkk",
+    "reveal_banner_7TyaaR",
+    "gallery_pFaYtc",
+    "video_hero_afQbkU",
+    "gallery_VY398h",
+    "featured_collection_gXTtDA",
+    "featured_collection_8Uw9WM",
+    "scrolling_promotion_UzPh6y",
+    "custom_liquid_iemGHJ",
+    "images_with_text_AN46tC",
+    "store_locator_eikWbE"
+  ]
+}
